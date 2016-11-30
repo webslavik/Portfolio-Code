@@ -1,0 +1,68 @@
+/* 
+	-----------------------------------------------
+		NAVIGATION
+	-----------------------------------------------
+*/
+
+.navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 400px;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	// z-index: 15;
+	background-color: $bg-nav;
+	
+	
+}
+
+.navigation-list {
+	@include list;
+
+	a {
+		position: relative;
+		font-family: $roboto;
+		font-size: rem(36);
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #acacac;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: #fff;
+
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transition: 400ms cubic-bezier(.645,.045,.355,1);
+
+			transform-origin: left top;
+			transform: scaleX(0) translateZ(0);
+		}
+
+		&:hover {
+			&:before {
+				transform: scaleX(1) translateZ(0);
+			}
+		}
+
+		&.is-active {
+			color: #fff;
+			&:hover {
+				&:before {
+					transform: scaleX(0) translateZ(0);
+				}
+			}
+		}
+	}
+}
+

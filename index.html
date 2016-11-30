@@ -4,13 +4,10 @@ title: Main Page
 ---
 
 
-	<div class="content">
-		{% include nav-hamburger.html %}
-		{% include header.html %}
-	</div>
+{% include nav.html %}
+{% include nav-hamburger.html %}
+<main class="content js-content">
+	{% include header.html %}
+	{% include footer.html %}
+</main>
 
-
-
-
-
-{% include footer.html %}

@@ -10,29 +10,34 @@
 var myModule = (function() {
 
 	// кешируем элементы
-	var $hamburger = $('.js-hamburger');
+	var $hamburger = $('.js-hamburger'),
+			$content = $('.js-content');
+
 
 	// Инициализируем запуск всех необходимых фукций
 	var init = function() {
 
 
-		svg4everybody({}); // Плагин для работы svg иконок в разных браузерах
-
+		svg4everybody({}); 
 		//-----------------------
-		_animationHamburger();
-
+		_showMenu();
 	};
 	//-------------------------------------------------------------------
 
-	// Hamburger Anamation
+	// Show|Hide Menu
   //-------------------------------------------------------------------
-	function _animationHamburger() {
+	function _showMenu() {
 		$hamburger.on('click', function() {
 			$(this).toggleClass('is-active');
+			$content.toggleClass('is-move');
+		});
+
+		$content.on('click', function() {
+			$(this).removeClass('is-move');
 		});
 	}
   //-------------------------------------------------------------------
-	
+
 	
 
 
