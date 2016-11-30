@@ -1,0 +1,57 @@
+/* 
+	-----------------------------------------------
+		HEADER
+	-----------------------------------------------
+*/
+
+.section-header {
+	position: relative;
+	background-color: $grey;
+	@include angle-edge(null, null, bottomright, 3deg);
+}
+
+.section-header-wrap {
+	height: 620px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+// Title
+//--------------------------------
+.header__title {
+	padding: 15px 50px;
+	font-family: $roboto;
+	font-weight: 900;
+	letter-spacing: 8px;
+	line-height: 68px;
+}
+
+.title--first,
+.title--second {
+	color: $grey;
+	background-color: $ocean;
+	font-size: rem(80);
+	font-weight: 900;
+}
+
+.title--first {
+	position: relative;
+	bottom: -15px;
+	margin-left: -180px;
+}
+
+.title--second {
+	margin-left: 30px;
+}
+
+.header__position {
+	font-family: $roboto;
+	font-weight: 900;
+	font-size: rem(32);
+	// line-height: 73px;
+	letter-spacing: 3.2px
+}
+

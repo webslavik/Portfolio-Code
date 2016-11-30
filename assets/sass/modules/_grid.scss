@@ -1,6 +1,6 @@
 /* 
 	-------------------------------------------
-	GRID
+		GRID
 	-------------------------------------------
 */
 
@@ -16,12 +16,11 @@ $susy: (
 
 
 // примеры Breakpoint
-$wide: 1200px;
-$desktop: 1024px 1200px;
-$tablet: 640px 1024px;
-$mobile: max-width 639px;
-$landscape: (max-height 600px) (orientation portrait);
-$hidpi: min-resolution 1.5dppx;
+$wide: max-width 1200px;
+$desktop: max-width 1024px;
+$tablet: max-width 768px;
+$mobile: max-width 480px;
+
 
 
 //-----------------------------------------------------------
@@ -36,7 +35,7 @@ $hidpi: min-resolution 1.5dppx;
 
 .container {
 	position: relative;
-	max-width: 1170px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 }

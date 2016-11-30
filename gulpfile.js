@@ -57,7 +57,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
 // Wait for jekyll-build, then launch the Server
 //--------------------------------------------------
-gulp.task('browser-sync', ['sass', 'js-main', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'js-main', 'svg-sprite' , 'js-vendor', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -122,7 +122,8 @@ gulp.task('js-vendor', function() {
         ])
         .pipe(concat('vendor.js')) // объединяем стороние бибилиотеки
         .pipe(uglify())
-        .pipe(gulp.dest('_site/assets/js/'))
+        .pipe(gulp.dest('assets/js'))
+        .pipe(gulp.dest('_site/assets/js/'));
 });
 
 
@@ -173,7 +174,7 @@ gulp.task('svg-sprite', function() {
                     sprite: "../img/svg-sprite.svg",
                     render: {
                         scss: {
-                            dest:'../sass/modules/_sprite_template.scss',
+                            dest:'../sass/modules/_svg-sprite.scss',
                             template: 'assets/sass/mixins/_sprite_template.scss'
                         }
                     }
@@ -192,10 +193,11 @@ gulp.task('watch', function () {
     gulp.watch('assets/sass/**/*', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/**/*.jade', ['jade']);
+    gulp.watch('assets/img/icon-svg/*', ['svg-sprite']);
 });
 
 
 
 // Default
 //--------------------------------------------------
-gulp.task('default', ['browser-sync', 'js-vendor', 'watch']);
+gulp.task('default', ['browser-sync', 'watch']);

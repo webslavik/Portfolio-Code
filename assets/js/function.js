@@ -10,24 +10,26 @@
 var myModule = (function() {
 
 	// кешируем элементы
-
+	var $hamburger = $('.js-hamburger');
 
 	// Инициализируем запуск всех необходимых фукций
 	var init = function() {
 
 
-		// svg4everybody({}); // Плагин для работы svg иконок в разных браузерах
+		svg4everybody({}); // Плагин для работы svg иконок в разных браузерах
 
 		//-----------------------
-		hello();
+		_animationHamburger();
 
 	};
 	//-------------------------------------------------------------------
 
-	// Для формирования сетки на странице Фотоальбома
+	// Hamburger Anamation
   //-------------------------------------------------------------------
-	function hello() {
-		console.log('Hello!');
+	function _animationHamburger() {
+		$hamburger.on('click', function() {
+			$(this).toggleClass('is-active');
+		});
 	}
   //-------------------------------------------------------------------
 	
