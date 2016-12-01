@@ -4,7 +4,7 @@
 	-----------------------------------------------
 */
 
-.section-header {
+.m-header {
 	height: 90vh;
 	background-color: $grey;
 	@include angle-edge(null, null, bottomright, 3deg);
@@ -14,38 +14,38 @@
 
 // Title
 //--------------------------------
-.header__title {
+.m-header-title {
 	padding: 15px 50px;
 	font-family: $roboto;
 	font-weight: 900;
 	letter-spacing: 8px;
 	line-height: 68px;
 	user-select: none;
+
+	&.title--first,
+	&.title--second {
+		color: $grey;
+		background-color: $ocean;
+		font-size: rem(80);
+		font-weight: 900;
+	}
+
+	&.title--first {
+		position: relative;
+		bottom: -15px;
+		margin-left: -180px;
+	}
+
+	&.title--second {
+		margin-left: 30px;
+	}
 }
 
-.title--first,
-.title--second {
-	color: $grey;
-	background-color: $ocean;
-	font-size: rem(80);
-	font-weight: 900;
-}
 
-.title--first {
-	position: relative;
-	bottom: -15px;
-	margin-left: -180px;
-}
-
-.title--second {
-	margin-left: 30px;
-}
-
-.header__position {
+.m-header-position {
 	font-family: $roboto;
 	font-weight: 900;
 	font-size: rem(32);
-	// line-height: 73px;
-	letter-spacing: 3.2px
+	letter-spacing: 3.2px;
 }
 

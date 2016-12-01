@@ -1058,7 +1058,7 @@ h4 {
 		HAMBURGER
 	-------------------------------------------
 */
-.section-hamburger {
+.p-hamburger {
   padding-top: 25px;
   padding-right: 50px;
   position: fixed;
@@ -1073,7 +1073,7 @@ h4 {
 		NAVIGATION
 	-----------------------------------------------
 */
-.navigation {
+.p-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1090,11 +1090,11 @@ h4 {
   left: 0;
   background-color: #343434; }
 
-.navigation-list {
+.p-navigation-list {
   margin: 0;
   padding: 0;
   list-style: none; }
-  .navigation-list a {
+  .p-navigation-list a {
     position: relative;
     font-family: "Roboto", sans-serif;
     font-size: 2.25rem;
@@ -1102,7 +1102,7 @@ h4 {
     text-transform: uppercase;
     text-decoration: none;
     color: #acacac; }
-    .navigation-list a:before {
+    .p-navigation-list a:before {
       content: '';
       display: block;
       width: 100%;
@@ -1117,12 +1117,12 @@ h4 {
               transform-origin: left top;
       -webkit-transform: scaleX(0) translateZ(0);
               transform: scaleX(0) translateZ(0); }
-    .navigation-list a:hover:before {
+    .p-navigation-list a:hover:before {
       -webkit-transform: scaleX(1) translateZ(0);
               transform: scaleX(1) translateZ(0); }
-    .navigation-list a.is-active {
+    .p-navigation-list a.is-active {
       color: #fff; }
-      .navigation-list a.is-active:hover:before {
+      .p-navigation-list a.is-active:hover:before {
         -webkit-transform: scaleX(0) translateZ(0);
                 transform: scaleX(0) translateZ(0); }
 
@@ -1131,13 +1131,13 @@ h4 {
 		HEADER
 	-----------------------------------------------
 */
-.section-header {
+.m-header {
   height: 90vh;
   background-color: #f3f3f3;
   width: 100%;
   position: relative;
   background: #f3f3f3; }
-  .section-header::before, .section-header::after {
+  .m-header::before, .m-header::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -1146,14 +1146,14 @@ h4 {
     z-index: -1;
     -webkit-transition: ease all .5s;
             transition: ease all .5s; }
-  .section-header::after {
+  .m-header::after {
     bottom: 0;
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
     -webkit-transform: skewY(3deg);
             transform: skewY(3deg); }
 
-.header__title {
+.m-header-title {
   padding: 15px 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -1163,23 +1163,19 @@ h4 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+  .m-header-title.title--first, .m-header-title.title--second {
+    color: #f3f3f3;
+    background-color: #93bad5;
+    font-size: 5rem;
+    font-weight: 900; }
+  .m-header-title.title--first {
+    position: relative;
+    bottom: -15px;
+    margin-left: -180px; }
+  .m-header-title.title--second {
+    margin-left: 30px; }
 
-.title--first,
-.title--second {
-  color: #f3f3f3;
-  background-color: #93bad5;
-  font-size: 5rem;
-  font-weight: 900; }
-
-.title--first {
-  position: relative;
-  bottom: -15px;
-  margin-left: -180px; }
-
-.title--second {
-  margin-left: 30px; }
-
-.header__position {
+.m-header-position {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 2rem;
@@ -1190,13 +1186,13 @@ h4 {
 		ABOUT MAIN PAGE
 	-----------------------------------------------
 */
-.about {
+.m-about {
   padding-top: 150px; }
 
-.about-foto-text {
+.m-about-row {
   margin-bottom: 80px; }
 
-.about-foto {
+.m-about-foto {
   max-width: 380px;
   max-height: 380px;
   width: 100%;
@@ -1207,10 +1203,10 @@ h4 {
   background-size: cover;
   border-radius: 50%; }
 
-.about-right {
+.m-about-right {
   padding-top: 50px; }
 
-.about-text {
+.m-about-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1226,13 +1222,13 @@ h4 {
           align-items: center;
   margin-bottom: 65px;
   font-size: 18px; }
-  .about-text p:first-child {
+  .m-about-text p:first-child {
     margin-bottom: 35px; }
 
-.about-btn-wrap {
+.m-about-btn-wrap {
   text-align: right; }
 
-.skills-list {
+.m-about-skills {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1246,7 +1242,7 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .skills-list li {
+  .m-about-skills li {
     margin-bottom: 12px; }
 
 .skills-bar-title {
@@ -1268,6 +1264,11 @@ h4 {
   bottom: 0;
   background-color: #93bad5; }
 
+/* 
+	-----------------------------------------------
+		WORK MAIN PAGE
+	-----------------------------------------------
+*/
 /* 
 	-----------------------------------------------
 		FOOTER

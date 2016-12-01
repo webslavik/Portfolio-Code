@@ -4,7 +4,7 @@
 	-----------------------------------------------
 */
 
-.about {
+.m-about {
 	// height: 110vh;
 	padding-top: 150px;
 }
@@ -12,11 +12,11 @@
 
 // Foto and Text
 //--------------------------------
-.about-foto-text {
+.m-about-row {
 	margin-bottom: 80px;
 }
 
-.about-foto {
+.m-about-foto {
 	max-width: 380px;
 	max-height: 380px;
 	width: 100%;
@@ -29,11 +29,11 @@
 }
 
 
-.about-right {
+.m-about-right {
 	padding-top: 50px;
 }
 
-.about-text {
+.m-about-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -46,23 +46,14 @@
 	}
 }
 
-.about-btn-wrap {
+.m-about-btn-wrap {
 	text-align: right;
 }
 
 
 // Skills
 //--------------------------------
-.about-skills {
-
-}
-
-.skills-title {
-
-}
-
-
-.skills-list {
+.m-about-skills {
 	@include list();
 	
 	max-width: 640px;
