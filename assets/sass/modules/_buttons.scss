@@ -3,3 +3,58 @@
 	BUTTONS
 	-------------------------------------------
 */
+
+.btn {
+	display: inline-block;
+	padding: 20px 70px 20px 25px;
+	// height: 70px;
+	font-family: $roboto;
+	background-color: #343434;
+	box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.35);
+	text-decoration: none;
+
+	transform-origin: right top;
+	transition-delay: .4s;
+	transition-duration: .8s;
+	transition-timing-function: cubic-bezier(.645,.045,.355,1);
+	position: relative;
+
+	&:hover {
+		&:after {
+			width: 100%;
+		}
+
+		span {
+			transform: translateX(15px);
+		}
+	}
+
+	span {
+		display: inline-block;
+		width: 190px;
+		font-size: rem(22);
+		font-weight: 700;
+		color: white;
+		letter-spacing: .005em;
+		position: relative;
+		z-index: 10;
+		text-align: left;
+		text-transform: capitalize;
+		transform: translateX(0px);
+		transition: all 600ms cubic-bezier(.645,.045,.355,1);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 5;
+		width: 0%;
+		background-color: $ocean;
+    transition-duration: .6s;
+    transition-timing-function: cubic-bezier(.645,.045,.355,1);
+	}
+}

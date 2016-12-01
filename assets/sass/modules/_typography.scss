@@ -9,5 +9,18 @@ h2,
 h3,
 h4 {
 	font-family: $roboto;
-	// font-weight: 900;
+	font-weight: 900;
+}
+
+
+.section-title {
+	margin-bottom: 70px;
+	font-size: rem(45);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 7.3px;
+
+	// &--m-bottom {
+	// 	margin-bottom: 60px;
+	// }
 }
