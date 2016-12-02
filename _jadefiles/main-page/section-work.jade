@@ -1,8 +1,41 @@
+include ../svg-mixin/_svg-sprite.jade
+
 // begin work main page
 
-section.m-page__work
+section.m-work
 	.container
 
 		h2.section-title Work
+
+		.m-work-icons.flex-row.flex-row--center
+			.m-work-icon
+				//- .icon
+				+icon('marker', 'icon-marker--mod')
+				.title Prototyping 
+			.m-work-icon.icon-design
+				//- .icon
+				+icon('layers', 'icon-layers--mod')
+				.title Design
+			.m-work-icon
+				//- .icon
+				+icon('code', 'icon-code--mod')
+				.title Development 
+
+		.m-work-list.flex-row.flex-row--wrap.flex-row--space-between
+			- var cover = ['montessori-cover.png']
+			- var i = 0;
+			while (i++ < 6)
+				a(href="#link").m-work-item(style='background-image: url(assets/img/png/#{cover[0]})')
+					.item-meta
+						.title Montessori
+						.descr #code
+
+		.m-work-btn-wrap
+			a(href="#link").btn 
+				span View Projects
+
+
+
+
 
 // end work main page

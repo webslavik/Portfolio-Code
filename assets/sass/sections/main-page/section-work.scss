@@ -5,5 +5,110 @@
 */
 
 
-// Title
+.m-work {
+	margin-bottom: 170px;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	background-color: $grey;
+	@include angle-edge(topright, 3deg, bottomright, 3deg);
+}
+
+
+
+// Icon Item
 //--------------------------------
+.m-work-icons {
+	margin-bottom: 85px;
+}
+
+.m-work-icon {
+	text-align: center;
+
+	&.icon-design {
+		margin-left: 140px;
+		margin-right: 140px;
+	}
+
+	.title {
+		margin-top: 20px;
+		font-family: $roboto;
+		font-size: rem(16);
+		font-weight: 900;
+		letter-spacing: 1.6px;
+	}
+}
+
+.icon-marker--mod,
+.icon-layers--mod,
+.icon-code--mod {
+	font-size: rem(44);
+}
+
+
+// Work Item
+//--------------------------------
+.m-work-list {
+	margin-bottom: 50px;
+}
+
+.m-work-item {
+	display: block;
+	width: calc(33.3333% - 15px);
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: $dark;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	&:hover,
+	&:active {
+		
+		.title {
+			transform: translateY(-15px);
+		}
+
+		.descr {
+			transform: translateY(-15px);
+			opacity: 1;
+		}
+	}
+
+		
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 80%;
+	}
+
+	.item-meta {
+		@include center();
+		color: #fff;
+		font-family: $roboto;
+		text-align: center;
+	}
+
+	.title {
+		font-size: rem(20);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transform: translateY(0px);
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+	}
+
+	.descr {
+		font-size: rem(14);
+		letter-spacing: 1.4px;
+		opacity: 0;
+		transform: translateY(0px);
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+	}
+}
+
+
+// Button wrap
+//--------------------------------
+.m-work-btn-wrap {
+	text-align: center;
+}

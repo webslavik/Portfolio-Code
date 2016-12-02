@@ -1,0 +1,93 @@
+/* 
+	-----------------------------------------------
+		BLOG MAIN PAGE
+	-----------------------------------------------
+*/
+
+.m-blog {
+}
+
+
+// Blog Item
+//--------------------------------
+.m-blog-list {
+	margin-bottom: 30px;
+	> div:first-child {
+		margin-right: 60px;
+	}
+
+}
+
+.m-blog-list-column {
+	max-width: 380px;
+	width: 100%;
+}
+
+.m-blog-item {
+	display: block;
+	// max-width: 380px;
+	width: 100%;
+	margin-bottom: 40px;
+	text-decoration: none;
+	color: $dark;
+
+	&:hover,
+	&:focus {
+		.tag,
+		.title,
+		.descr {
+			transform: translateY(-15px);
+		}
+
+		.read {
+			transform: translateY(-15px);
+			opacity: 1;
+		}
+	}
+
+	.tag,
+	.title,
+	.descr {
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+		transform: translateY(0px);
+	}
+
+	.tag,
+	.title {
+		font-family: $roboto;
+		font-weight: 500;
+	}
+
+	.tag {
+		font-size: rem(14);
+		letter-spacing: 0.84px;
+	}
+
+	.title {
+		margin-bottom: 5px;
+		font-size: rem(26);
+		letter-spacing: 1.04px;
+	}
+
+	.descr {
+		margin-bottom: 5px;
+		line-height: 26px;
+		letter-spacing: 0.96px;
+	}
+
+	.read {
+		font-family: $roboto;
+		font-size: rem(14);
+		color: $ocean;
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+		opacity: 0;
+		transform: translateY(0px);
+	}
+}
+
+
+// Button wrap
+//--------------------------------
+.m-blog-btn-wrap {
+	text-align: center;
+}
