@@ -6,20 +6,24 @@
 
 .btn {
 	display: inline-block;
-	padding: 20px 70px 20px 25px;
+	width: 300px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	// padding: 20px 70px 20px 25px;
 	// height: 70px;
 	font-family: $roboto;
-	background-color: #343434;
+	background-color: $secondary;
 	box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.35);
 	text-decoration: none;
 
 	transform-origin: right top;
 	transition-delay: .4s;
-	transition-duration: .8s;
 	transition-timing-function: cubic-bezier(.645,.045,.355,1);
 	position: relative;
+	text-align: center;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		&:after {
 			width: 100%;
 		}
@@ -31,7 +35,7 @@
 
 	span {
 		display: inline-block;
-		width: 190px;
+		width: auto;
 		font-size: rem(22);
 		font-weight: 700;
 		color: white;
@@ -40,7 +44,7 @@
 		z-index: 10;
 		text-align: left;
 		text-transform: capitalize;
-		transform: translateX(0px);
+		transform: translateX(-5px);
 		transition: all 600ms cubic-bezier(.645,.045,.355,1);
 	}
 
@@ -53,7 +57,7 @@
 		bottom: 0;
 		z-index: 5;
 		width: 0%;
-		background-color: $ocean;
+		background-color: $primary;
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(.645,.045,.355,1);
 	}
