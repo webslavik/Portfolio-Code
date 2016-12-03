@@ -7,8 +7,8 @@
 .m-header {
 	height: 90vh;
 	margin-bottom: 170px;
-	background-color: $grey;
 	@include angle-edge(null, null, bottomright, 3deg);
+	background-color: $grey;
 }
 
 
@@ -39,9 +39,9 @@
 
 	&.title--second {
 		margin-left: 30px;
+		margin-bottom: 20px;
 	}
 }
-
 
 .m-header-position {
 	font-family: $roboto;
@@ -50,3 +50,76 @@
 	letter-spacing: 3.2px;
 }
 
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+
+	.m-header-title {
+		padding: 10px 45px;
+		line-height: 68px;
+		letter-spacing: 7px;
+
+		&.title--first,
+		&.title--second {
+			font-size: rem(70);
+		}
+
+		&.title--first {
+			margin-left: -165px;
+		}
+	}
+}
+
+
+@include breakpoint($mobile) {
+
+	.m-header {
+		height: 100vh;
+		margin-bottom: 100px;
+		transition-duration: 999999s;
+	}
+
+	
+	.m-header-title {
+		padding: 0px 30px;
+		letter-spacing: 4.5px;
+
+		&.title--first,
+		&.title--second {
+			font-size: rem(45);
+		}
+
+		&.title--first {
+			margin-left: -110px;
+		}
+
+		&.title--second {
+			margin-left: 20px;
+		}
+	}
+
+	.m-header-position {
+		font-size: rem(24);
+		letter-spacing: 2.4px;
+	}
+
+}
+
+
+@include breakpoint($superExtraMobile) {
+
+	
+	.m-header-title {
+		padding: 0px 30px;
+		letter-spacing: 4px;
+
+		&.title--first,
+		&.title--second {
+			font-size: rem(40);
+		}
+	}
+
+
+}

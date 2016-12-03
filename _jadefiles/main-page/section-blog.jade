@@ -6,8 +6,8 @@ section.m-blog
 	.container
 		h2.section-title Blog
 
-		.m-blog-list.flex-row.flex-row--wrap.flex-row--center
-			.m-blog-list-column
+		.m-blog-row
+			.m-blog-column
 				- var i = 0;
 				while (i++ < 3)
 					a(href="#link").m-blog-item
@@ -15,7 +15,7 @@ section.m-blog
 						.title Blog article title
 						.descr  #{text[i-1]}
 						.read &#8210; Read
-			.m-blog-list-column
+			.m-blog-column
 				- var z = 3;
 				while (z++ < 6)
 					a(href="#link").m-blog-item

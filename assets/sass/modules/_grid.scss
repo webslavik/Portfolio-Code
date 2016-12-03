@@ -16,11 +16,14 @@
 
 
 // примеры Breakpoint
-$wide: max-width 1200px;
-$desktop: max-width 1024px;
-$tablet: max-width 768px;
-$mobile: max-width 480px;
+$wide: 1201px;
+$desktop: max-width 1200px;
+$tablet: max-width 1024px;
+$mobile: max-width 768px;
+$extraMobile: max-width 480px;
 
+// Experemental
+$superExtraMobile: max-width 359px;
 
 
 //-----------------------------------------------------------
@@ -102,3 +105,24 @@ $mobile: max-width 480px;
 	width: 100%;
 }
 
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+
+	//-----------------------------------------------------------
+	// .flex-row {
+	// 	flex-direction: column;
+	// }
+
+	.col-5 {
+		width: 100%;
+	}
+
+
+}

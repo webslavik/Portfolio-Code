@@ -5,23 +5,36 @@
 */
 
 .m-about {
-	// height: 110vh;
 	margin-bottom: 170px;
 	background-color: #fff;
 }
 
+.m-about-row {
+	display: flex;
+
+	&--center {
+		justify-content: center;
+	}
+
+	&--m-bottom {
+		margin-bottom: 80px;
+	}
+}
+
+.m-about-left-column,
+.m-about-right-column {
+	width: 50%;
+}
+
+.m-about-right-column {
+	padding-top: 50px;
+}
 
 // Foto and Text
 //--------------------------------
-.m-about-row {
-	margin-bottom: 80px;
-}
-
 .m-about-foto {
-	max-width: 380px;
-	max-height: 380px;
-	width: 100%;
-	height: 100%;
+	width: 380px;
+	height: 380px;
 	background-image: url(../img/jpg/my-test.jpeg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -29,10 +42,6 @@
 	border-radius: 50%;
 }
 
-
-.m-about-right {
-	padding-top: 50px;
-}
 
 .m-about-text {
 	display: flex;
@@ -77,7 +86,6 @@
 	width: 270px;
 	height: 8px;
 	background-color: #e6e6e6;
-
 	position: relative;
 }
 
@@ -89,4 +97,85 @@
 	right: 0;
 	bottom: 0;
 	background-color: $primary;
+}
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+	
+	.m-about-row {
+		&--m-bottom {
+			margin-bottom: 70px;
+		}
+	}
+
+	.m-about-right-column {
+		padding-top: 0px;
+	}
+
+	//--------------------------------
+	.m-about-foto {
+		width: 320px;
+		height: 320px;
+	}
+
+	.m-about-text {
+		margin-bottom: 50px;
+	}
+}
+
+
+@include breakpoint($mobile) {
+
+	.m-about {
+		margin-bottom: 100px;
+	}
+
+	.m-about-row {
+		flex-direction: column;
+	}
+
+	.m-about-left-column,
+	.m-about-right-column {
+		width: 100%;
+	}
+
+
+	//--------------------------------
+	.m-about-foto {
+		width: 240px;
+		height: 240px;
+		margin: 0 auto 30px;
+	}
+
+	.m-about-text {
+		p:first-child {
+			margin-bottom: 15px;
+		}
+	}
+
+	.m-about-btn-wrap {
+		text-align: center;
+	}
+	
+	//--------------------------------
+	.m-about-skills {
+		max-width: 400px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.skills-bar {
+		width: 100%;
+		height: 8px;
+		background-color: #e6e6e6;
+		position: relative;
+	}
+}
+
+@include breakpoint($extraMobile) {
+	.m-about-skills {
+		max-width: 100%;
+	}
 }

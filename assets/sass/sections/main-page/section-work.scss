@@ -18,6 +18,8 @@
 // Icon Item
 //--------------------------------
 .m-work-icons {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 85px;
 }
 
@@ -48,6 +50,9 @@
 // Work Item
 //--------------------------------
 .m-work-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin-bottom: 50px;
 }
 
@@ -129,4 +134,69 @@
 //--------------------------------
 .m-work-btn-wrap {
 	text-align: center;
+}
+
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+	
+	.m-work {
+		margin-bottom: 100px;
+	}
+
+	//--------------------------------
+	.m-work-icons {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 50px;
+	}
+
+	.m-work-icon {
+		&.icon-design {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.title {
+			margin-top: 15px;
+		}
+	}
+
+	.icon-marker--mod,
+	.icon-layers--mod,
+	.icon-code--mod {
+		font-size: rem(36);
+	}
+
+	//--------------------------------
+	.m-work-item {
+		width: calc(50% - 10px);
+	}
+
+}
+
+@include breakpoint($extraMobile) {
+
+	//--------------------------------
+	.m-work-icon {
+		.title {
+			margin-top: 10px;
+			font-size: rem(14);
+			letter-spacing: 1.4px;
+		}
+	}
+
+	.icon-marker--mod,
+	.icon-layers--mod,
+	.icon-code--mod {
+		font-size: rem(30);
+	}
+
+	//--------------------------------
+	.m-work-item {
+		width: calc(100% - 0px);
+	}
+
 }

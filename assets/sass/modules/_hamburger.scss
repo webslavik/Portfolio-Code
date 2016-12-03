@@ -5,7 +5,6 @@
 */
 
 
-//---------------------------------------------------
 .p-hamburger {
 	padding-top: 10px;
 	padding-right: 50px;
@@ -16,4 +15,20 @@
 	right: 0;
 	z-index: 10;
 	text-align: right;
+}
+
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+	.p-hamburger {
+		padding-right: 30px;
+	}
+}
+
+@include breakpoint($mobile) {
+	.p-hamburger {
+		padding-right: 20px;
+	}
 }

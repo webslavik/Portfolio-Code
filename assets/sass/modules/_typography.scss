@@ -18,9 +18,22 @@ h4 {
 	font-size: rem(45);
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 7.3px;
+	letter-spacing: 4.5px;
 
-	// &--m-bottom {
-	// 	margin-bottom: 60px;
-	// }
+}
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+	.section-title {
+		margin-bottom: 40px;
+	}
+}
+
+@include breakpoint($extraMobile) {
+	.section-title {
+		font-size: rem(38);
+		letter-spacing: 3.8px;
+	}
 }

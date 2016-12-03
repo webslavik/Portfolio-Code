@@ -29,7 +29,7 @@
 		font-weight: 500;
 		color: $dark;
 		text-decoration: none;
-		letter-spacing: 2.4px;
+		letter-spacing: 2.2px;
 		border: 2px solid $dark;
 		transition: all 400ms cubic-bezier(.645,.045,.355,1);
 		text-transform: uppercase;
@@ -48,4 +48,36 @@
 	font-family: $roboto;
 	text-align: center;
 	font-size: rem(20);
+}
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+
+	.m-contact {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		padding-top: 0px;
+		padding-bottom: 0px;
+		transition-duration: 999999s;
+	}
+
+}
+
+@include breakpoint($extraMobile) {
+
+	.m-contact-email {
+		a {
+			width: 97%;
+			display: inline-block;
+			padding: 6px 10px;
+			font-family: $roboto;
+			font-size: rem(16);
+			letter-spacing: 1.6px;
+		}
+	}
 }
