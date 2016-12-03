@@ -1,0 +1,51 @@
+/* 
+	-----------------------------------------------
+		CONTACT MAIN PAGE
+	-----------------------------------------------
+*/
+
+.m-contact {
+	padding-top: 20px;
+	padding-bottom: 80px;
+	@include angle-edge(topright, 3deg, null, null);
+
+	&:after {
+		display: none;
+	}
+}
+
+
+// Email
+//--------------------------------
+.m-contact-email {
+	margin-bottom: 30px;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		padding: 6px 20px;
+		font-family: $roboto;
+		font-size: rem(22);
+		font-weight: 500;
+		color: $dark;
+		text-decoration: none;
+		letter-spacing: 2.4px;
+		border: 2px solid $dark;
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			color: $grey;
+			background-color: $dark;
+		}
+	}
+}
+
+
+.m-contact-or {
+	margin-bottom: 30px;
+	font-family: $roboto;
+	text-align: center;
+	font-size: rem(20);
+}

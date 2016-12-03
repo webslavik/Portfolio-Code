@@ -11,7 +11,8 @@ var myModule = (function() {
 
 	// кешируем элементы
 	var $hamburger = $('.js-hamburger'),
-			$content = $('.js-content');
+			$content = $('.js-content'),
+			$navigation = $('.js-navigation');
 
 
 	// Инициализируем запуск всех необходимых фукций
@@ -30,10 +31,12 @@ var myModule = (function() {
 		$hamburger.on('click', function() {
 			$(this).toggleClass('is-active');
 			$content.toggleClass('is-move');
+			$navigation.toggleClass('is-move');
 		});
 
 		$content.on('click', function() {
 			$(this).removeClass('is-move');
+			$navigation.removeClass('is-move');
 		});
 	}
   //-------------------------------------------------------------------

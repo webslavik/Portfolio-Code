@@ -1,0 +1,30 @@
+/* 
+	-------------------------------------------
+		SOCIAL LINKS
+	-------------------------------------------
+*/
+
+.p-social {
+	text-align: center;
+
+	a {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+		font-size: 0;
+	}
+}
+
+.logo-codepen--mod,
+.logo-vk--mod,
+.logo-facebook--mod,
+.logo-github--mod,
+.logo-linkedin--mod {
+	font-size: rem(44);
+	color: $dark;
+	transition: all 400ms cubic-bezier(.645,.045,.355,1);
+
+	&:hover {
+		color: $primary;
+	}
+}

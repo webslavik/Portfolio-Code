@@ -27,10 +27,7 @@ $mobile: max-width 480px;
 
 .page-wrap {
 	height: 100%;
-	overflow: hidden;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
+	overflow-x: hidden;
 }
 
 
@@ -44,14 +41,14 @@ $mobile: max-width 480px;
 }
 
 .content {
+	height: 100%;
+	width: 100%;
 	position: relative;
 	z-index: 5;
 	background-color: #fff;
-	height: 100%;
 	transition-duration: .7s;
   transition-timing-function: cubic-bezier(.645,.045,.355,1);
 	transform: translateX(0px);
-	
 
 	&.is-move {
 		transform: translateX(400px);
