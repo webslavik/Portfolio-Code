@@ -22,13 +22,19 @@ section.m-work
 				.title Development 
 
 		.m-work-list.flex-row.flex-row--wrap.flex-row--space-between
-			- var cover = ['montessori-cover.png']
+
+			- var logos = ['svg/qlothes-cover.svg', 'svg/montessori-cover.svg', 'png/danceworld-cover.png', 'png/cmsmagazine-cover.png', 'svg/sab-cover.svg', 'png/chikkipizza-cover.png']
+			- var coverColor = ['#d5ece1', '#c27871', '#f66b8f', '#e4e5e6', '#d0ba93', '#e3975a']
+			- var projName = ['Qlothes','Montessori', 'DanceWorld', 'cmsmagazine', 'SAB', 'ChikkiPizza']
+			- var logosSize = ['35', '45', '40', '55', '35', '30']
 			- var i = 0;
 			while (i++ < 6)
-				a(href="#link").m-work-item(style='background-image: url(assets/img/png/#{cover[0]})')
+
+				a(href="#link").m-work-item(style='background-image: url(assets/img/#{logos[i-1]}); background-color: #{coverColor[i-1]}; background-size: #{logosSize[i-1]}%;')
 					.item-meta
-						.title Montessori
+						.title #{projName[i-1]}
 						.descr #code
+					.cover(style='background-color: #{coverColor[i-1]}')
 
 		.m-work-btn-wrap
 			a(href="#link").btn 
