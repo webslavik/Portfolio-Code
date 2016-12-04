@@ -1,0 +1,46 @@
+/* 
+	-----------------------------------------------
+		POSTS PAGE
+	-----------------------------------------------
+*/
+
+.container--posts {
+
+	article:last-child {
+		margin-bottom: 180px;
+	}
+}
+
+.post {
+	margin-bottom: 90px;
+}
+
+.post-title {
+	margin-bottom: 5px;
+	
+	a {
+		font-size: rem(32);
+		font-weight: 700;
+		color: $primary;
+		text-decoration: none;
+	}
+}
+
+.post-description {
+	margin-bottom: 10px;
+	font-size: rem(18);
+	line-height: 32px;
+}
+
+.post-date {
+	font-size: rem(13);
+}
+
+.post-tag {
+	font-size: rem(14);
+	color: $primary;
+}
+
+.post-btn-wrap {
+	text-align: right;
+}

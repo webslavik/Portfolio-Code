@@ -184,6 +184,8 @@ p {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px; }
+  .container.container--posts {
+    max-width: 780px; }
 
 .flex-row {
   display: -webkit-box;
@@ -300,6 +302,10 @@ p {
           transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
   text-align: center; }
+  .btn--post {
+    width: 200px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
   .btn:hover:after, .btn:focus:after {
     width: 100%; }
   .btn:hover span, .btn:focus span {
@@ -496,10 +502,105 @@ h4 {
 
 /* 
 	-----------------------------------------------
+		INNER HEADER
+	-----------------------------------------------
+*/
+.i-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  margin-bottom: 100px;
+  background-color: #f3f3f3; }
+
+.i-header-title {
+  display: inline-block;
+  padding: 15px 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px;
+  line-height: 68px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  background-color: #70a0af;
+  font-size: 5rem;
+  color: #f3f3f3; }
+
+/* 
+	-----------------------------------------------
+		INNER FOOTER
+	-----------------------------------------------
+*/
+.i-footer {
+  padding: 45px 0;
+  background-color: #f3f3f3; }
+
+/* 
+	-----------------------------------------------
+		POSTS PAGE
+	-----------------------------------------------
+*/
+.container--posts article:last-child {
+  margin-bottom: 180px; }
+
+.post {
+  margin-bottom: 90px; }
+
+.post-title {
+  margin-bottom: 5px; }
+  .post-title a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #70a0af;
+    text-decoration: none; }
+
+.post-description {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+  line-height: 32px; }
+
+.post-date {
+  font-size: 0.8125rem; }
+
+.post-tag {
+  font-size: 0.875rem;
+  color: #70a0af; }
+
+.post-btn-wrap {
+  text-align: right; }
+
+/* 
+	-----------------------------------------------
 		HEADER MAIN PAGE
 	-----------------------------------------------
 */
 .m-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 90vh;
   margin-bottom: 170px;
   width: 100%;
@@ -531,12 +632,11 @@ h4 {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  color: #f3f3f3; }
   .m-header-title.title--first, .m-header-title.title--second {
-    color: #f3f3f3;
     background-color: #70a0af;
-    font-size: 5rem;
-    font-weight: 900; }
+    font-size: 5rem; }
   .m-header-title.title--first {
     position: relative;
     bottom: -15px;
@@ -1084,12 +1184,3 @@ h4 {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     letter-spacing: 1.6px; } }
-
-/* 
-	-----------------------------------------------
-		FOOTER
-	-----------------------------------------------
-*/
-.footer {
-  padding: 20px 0;
-  background-color: #673AB7; }

@@ -22,6 +22,12 @@
 	position: relative;
 	text-align: center;
 
+	&--post {
+		width: 200px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
 	&:hover,
 	&:focus {
 		&:after {

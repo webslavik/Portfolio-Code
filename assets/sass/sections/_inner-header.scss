@@ -1,0 +1,33 @@
+/* 
+	-----------------------------------------------
+		INNER HEADER
+	-----------------------------------------------
+*/
+
+.i-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 500px;
+	margin-bottom: 100px;
+	background-color: $grey;
+}
+
+
+.i-header-title {
+	display: inline-block;
+
+	padding: 15px 50px;
+	font-family: $roboto;
+	font-weight: 900;
+	letter-spacing: 8px;
+	line-height: 68px;
+	user-select: none;
+	text-align: center;
+
+	background-color: $primary;
+	font-size: rem(80);
+	color: $grey;
+}

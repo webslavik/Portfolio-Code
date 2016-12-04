@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog | SLAVIK SUKHANOV .COM
+pageTitle: Статьи
+---
+
+{% include nav.html %}
+{% include nav-hamburger.html %}
+
+<main class="content js-content">
+	{% include inner-header.html %}
+
+	<div class="container container--posts">
+		{% for post in site.posts %}
+			<article class='post'>
+				<h2 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<div class='post-description'>{{ post.description }}</div>
+				<div>
+					<span class="post-date">{{ post.date | date_to_string }} /</span>
+					<span class="post-tag">#{{ post.categories }}</span>
+				</div>
+				<div class='post-btn-wrap'>
+					<a href="{{ post.url }}" class="btn btn--post">
+						<span>Читать</span>
+					</a>
+				</div>
+			</article>
+		{% endfor %}
+	</div>
+	
+	{% include inner-footer.html %}
+
+</main>

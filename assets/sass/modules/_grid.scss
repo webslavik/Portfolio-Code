@@ -41,6 +41,10 @@ $superExtraMobile: max-width 359px;
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+
+	&.container--posts {
+		max-width: 780px;
+	}
 }
 
 //-----------------------------------------------------------
