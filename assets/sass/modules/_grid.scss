@@ -43,22 +43,6 @@ $superExtraMobile: max-width 359px;
 	padding-right: 15px;
 }
 
-.content {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	z-index: 5;
-	background-color: #fff;
-	transition-duration: .7s;
-  transition-timing-function: cubic-bezier(.645,.045,.355,1);
-	transform: translateX(0px);
-
-	&.is-move {
-		transform: translateX(400px);
-		cursor: pointer;
-	}
-}
-
 //-----------------------------------------------------------
 .flex-row {
 	display: flex;

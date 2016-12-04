@@ -1,0 +1,53 @@
+/* 
+	-------------------------------------------
+		CONTENT WRAP
+	-------------------------------------------
+*/
+
+.content {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 5;
+	background-color: #fff;
+	transition-duration: .7s;
+  transition-timing-function: cubic-bezier(.645,.045,.355,1);
+	transform: translateX(0px);
+
+	&.is-move {
+		transform: translateX(400px);
+		cursor: pointer;
+	}
+}
+
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+
+	.content {
+		transform: translateX(0px);
+
+		&.is-move {
+			transform: translateX(300px);
+		}
+	}
+
+
+}
+
+
+
+@include breakpoint($mobile) {
+
+	.content {
+		transform: translateX(0px);
+
+		&.is-move {
+			transform: translateX(100%);
+		}
+	}
+
+}
+

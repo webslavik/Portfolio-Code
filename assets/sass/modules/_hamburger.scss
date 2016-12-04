@@ -29,6 +29,21 @@
 
 @include breakpoint($mobile) {
 	.p-hamburger {
-		padding-right: 20px;
+		padding-top: 25px;
+		padding-right: 10px;
 	}
+
+	.hamburger--collapse-r {
+		&.is-active {
+			.hamburger-inner {
+			  &,
+			  &::before,
+			  &::after {
+			    background-color: #fff;
+			  }
+			}
+		}
+	}
+
+
 }

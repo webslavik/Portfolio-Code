@@ -69,3 +69,37 @@
 	}
 }
 
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+
+	.p-navigation {
+		width: 300px;
+	}
+
+	.p-navigation-list {
+		a {
+			font-size: rem(32);
+		}
+	}
+
+}
+
+
+@include breakpoint($mobile) {
+
+	.p-navigation {
+		width: 100%;
+		transform: translateX(-100%);
+	}
+
+	.p-navigation-list {
+		a {
+			font-size: rem(36);
+		}
+	}
+
+}
+
