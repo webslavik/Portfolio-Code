@@ -31,3 +31,35 @@
 	font-size: rem(80);
 	color: $grey;
 }
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($tablet) {
+	
+	.i-header-title {
+		font-size: rem(70);
+		padding: 10px 45px;
+		line-height: 68px;
+		letter-spacing: 7px;
+	}
+
+}
+
+
+@include breakpoint($mobile) {
+
+	.i-header {
+
+		height: 350px;
+		margin-bottom: 60px;
+	}
+
+	
+	.i-header-title {
+		font-size: rem(45);
+		padding: 0px 30px;
+		letter-spacing: 4.5px;
+	}
+
+}

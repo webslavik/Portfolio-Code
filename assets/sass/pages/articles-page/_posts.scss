@@ -21,7 +21,7 @@
 	a {
 		font-size: rem(32);
 		font-weight: 700;
-		color: $primary;
+		color: $dark;
 		text-decoration: none;
 	}
 }
@@ -43,4 +43,38 @@
 
 .post-btn-wrap {
 	text-align: right;
+}
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+
+	.container--posts {
+
+		article:last-child {
+			margin-bottom: 120px;
+		}
+	}
+
+	.post {
+		margin-bottom: 60px;
+	}
+
+	.post-title {
+		margin-bottom: 10px;
+		a {
+			line-height: 38px;
+		}
+	}
+
+	.post-date-tag-wrap {
+		margin-bottom: 35px;
+	}
+
+	.post-btn-wrap {
+		text-align: center;
+	}
+
+
 }

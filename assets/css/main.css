@@ -122,7 +122,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+blockquote {
   margin: 0; }
 
 /* 
@@ -369,6 +370,281 @@ h4 {
     font-size: 2.375rem;
     letter-spacing: 3.8px; } }
 
+.highlight {
+  margin: 35px 0 35px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  border-left: 4px solid #70a0af;
+  background: #f3f3f3;
+  overflow-x: auto; }
+  .highlight pre {
+    margin: 0; }
+  .highlight code,
+  .highlight pre {
+    font-size: 1.125rem; }
+
+.highlight .c {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* Error */
+.highlight .k {
+  font-weight: bold; }
+
+/* Keyword */
+.highlight .o {
+  font-weight: bold; }
+
+/* Operator */
+.highlight .cm {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold; }
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Single */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* Comment.Special */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* Generic.Deleted */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa; }
+
+/* Generic.Deleted.Specific */
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gr {
+  color: #aa0000; }
+
+/* Generic.Error */
+.highlight .gh {
+  color: #999999; }
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd; }
+
+/* Generic.Inserted */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa; }
+
+/* Generic.Inserted.Specific */
+.highlight .go {
+  color: #888888; }
+
+/* Generic.Output */
+.highlight .gp {
+  color: #555555; }
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* Generic.Subheading */
+.highlight .gt {
+  color: #aa0000; }
+
+/* Generic.Traceback */
+.highlight .kc {
+  font-weight: bold; }
+
+/* Keyword.Constant */
+.highlight .kd {
+  font-weight: bold; }
+
+/* Keyword.Declaration */
+.highlight .kp {
+  font-weight: bold; }
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  font-weight: bold; }
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold; }
+
+/* Keyword.Type */
+.highlight .m {
+  color: #009999; }
+
+/* Literal.Number */
+.highlight .s {
+  /* Literal.String */
+  color: #d14; }
+
+.highlight .na {
+  color: #008080; }
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #0086B3; }
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold; }
+
+/* Name.Class */
+.highlight .no {
+  color: #008080; }
+
+/* Name.Constant */
+.highlight .ni {
+  color: #800080; }
+
+/* Name.Entity */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold; }
+
+/* Name.Exception */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold; }
+
+/* Name.Function */
+.highlight .nn {
+  color: #555555; }
+
+/* Name.Namespace */
+.highlight .nt {
+  /* Name.Tag */
+  color: #c6463d; }
+
+.highlight .nv {
+  color: #008080; }
+
+/* Name.Variable */
+.highlight .ow {
+  font-weight: bold; }
+
+/* Operator.Word */
+.highlight .w {
+  color: #bbbbbb; }
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #009999; }
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #009999; }
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #009999; }
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #009999; }
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #d14; }
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #d14; }
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #d14; }
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #d14; }
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #d14; }
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #d14; }
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #d14; }
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #d14; }
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #009926; }
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #d14; }
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #990073; }
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #999999; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #008080; }
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #008080; }
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #008080; }
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #009999; }
+
+/* Literal.Number.Integer.Long */
+@media (max-width: 768px) {
+  .highlight {
+    margin: 35px 0 35px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px; }
+    .highlight code,
+    .highlight pre {
+      font-size: 1rem; } }
+
 /* 
 	-------------------------------------------
 		HAMBURGER
@@ -539,6 +815,22 @@ h4 {
   font-size: 5rem;
   color: #f3f3f3; }
 
+@media (max-width: 1024px) {
+  .i-header-title {
+    font-size: 4.375rem;
+    padding: 10px 45px;
+    line-height: 68px;
+    letter-spacing: 7px; } }
+
+@media (max-width: 768px) {
+  .i-header {
+    height: 350px;
+    margin-bottom: 60px; }
+  .i-header-title {
+    font-size: 2.8125rem;
+    padding: 0px 30px;
+    letter-spacing: 4.5px; } }
+
 /* 
 	-----------------------------------------------
 		INNER FOOTER
@@ -564,7 +856,7 @@ h4 {
   .post-title a {
     font-size: 2rem;
     font-weight: 700;
-    color: #70a0af;
+    color: #222222;
     text-decoration: none; }
 
 .post-description {
@@ -581,6 +873,76 @@ h4 {
 
 .post-btn-wrap {
   text-align: right; }
+
+@media (max-width: 768px) {
+  .container--posts article:last-child {
+    margin-bottom: 120px; }
+  .post {
+    margin-bottom: 60px; }
+  .post-title {
+    margin-bottom: 10px; }
+    .post-title a {
+      line-height: 38px; }
+  .post-date-tag-wrap {
+    margin-bottom: 35px; }
+  .post-btn-wrap {
+    text-align: center; } }
+
+/* 
+	-----------------------------------------------
+		ARTICLE PAGE
+	-----------------------------------------------
+*/
+.article {
+  margin-bottom: 150px;
+  font-size: 1.125rem; }
+  .article h1,
+  .article h2,
+  .article h3,
+  .article h4 {
+    font-weight: 700; }
+  .article h1 {
+    margin-bottom: 10px;
+    font-size: 2.8125rem;
+    line-height: 48px; }
+  .article h2 {
+    font-size: 2.1875rem;
+    line-height: 38px; }
+  .article p {
+    margin-bottom: 15px;
+    line-height: 32px; }
+
+.article-date-tag {
+  margin-bottom: 33px; }
+
+.article-date {
+  font-size: 0.8125rem; }
+
+.article-tag {
+  font-size: 0.875rem;
+  color: #70a0af; }
+
+.blockquote {
+  margin-bottom: 45px;
+  font-style: italic; }
+
+.blockquote-bold {
+  font-weight: 700;
+  font-style: normal; }
+
+.blockquote-link {
+  text-decoration: none;
+  color: #c6463d;
+  font-weight: bold;
+  -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-bottom: 1px solid transparent; }
+  .blockquote-link:hover {
+    border-bottom-color: #c6463d; }
+
+@media (max-width: 768px) {
+  .article {
+    margin-bottom: 90px; } }
 
 /* 
 	-----------------------------------------------

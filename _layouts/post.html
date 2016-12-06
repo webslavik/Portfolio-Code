@@ -1,9 +1,18 @@
 ---
 layout: default
+innerPageTitle: Статьи
 ---
 
+{% include nav.html %}
+{% include nav-hamburger.html %}
 
+<main class="content js-content">
+	{% include inner-header.html %}
 
-<div class="container">
+	<div class="container container--posts article">
+		{{ content }}
+	</div>
+	
+	{% include inner-footer.html %}
 
-</div>
+</main>

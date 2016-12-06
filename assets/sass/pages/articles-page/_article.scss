@@ -3,3 +3,87 @@
 		ARTICLE PAGE
 	-----------------------------------------------
 */
+
+.article {
+	margin-bottom: 150px;
+	font-size: rem(18);
+	
+
+	//------------------------
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-weight: 700;
+	}
+
+	h1 {
+		margin-bottom: 10px;
+		font-size: rem(45);
+		line-height: 48px;
+	}
+
+	h2 {
+		font-size: rem(35);
+		line-height: 38px;
+	}
+
+	p {
+		margin-bottom: 15px;
+		line-height: 32px;
+	}
+
+}
+
+
+
+// Date and Tag
+//--------------------------------
+.article-date-tag {
+	margin-bottom: 33px;
+}
+
+.article-date {
+	font-size: rem(13);
+}
+
+.article-tag {
+	font-size: rem(14);
+	color: $primary;
+}
+
+
+// Blockquote
+//--------------------------------
+.blockquote {
+	margin-bottom: 45px;
+	font-style: italic;
+}
+
+.blockquote-bold {
+	font-weight: 700;
+	font-style: normal;
+}
+
+.blockquote-link {
+	text-decoration: none;
+	color: $red;
+	font-weight: bold;
+	transition: all 200ms cubic-bezier(.645,.045,.355,1);
+	border-bottom: 1px solid transparent;
+
+	&:hover {
+    border-bottom-color: $red;
+	}
+}
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($mobile) {
+	
+	.article {
+		margin-bottom: 90px;
+	}
+
+}
