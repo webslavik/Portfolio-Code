@@ -39,6 +39,7 @@ var myModule = (function() {
 		$content.on('click', function() {
 			$(this).removeClass('is-move');
 			$navigation.removeClass('is-move');
+			$hamburger.removeClass('is-active');
 		});
 	}
   //-------------------------------------------------------------------

@@ -12,8 +12,9 @@
 	height: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
-	transform: translateX(-400px);
+	// left: 0;
+	right: 0;
+	transform: translateX(400px);
 	background-color: $secondary;
 	transition-duration: .7s;
   transition-timing-function: cubic-bezier(.645,.045,.355,1);
@@ -76,7 +77,7 @@
 @include breakpoint($tablet) {
 
 	.p-navigation {
-		width: 300px;
+		width: 316px;
 	}
 
 	.p-navigation-list {
@@ -92,7 +93,8 @@
 
 	.p-navigation {
 		width: 100%;
-		transform: translateX(-100%);
+		transform: translateX(100%);
+		z-index: 10;
 	}
 
 	.p-navigation-list {

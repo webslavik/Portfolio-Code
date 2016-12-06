@@ -18,6 +18,18 @@
 }
 
 
+.hamburger--collapse-r {
+	&.is-active {
+		.hamburger-inner {
+		  &,
+		  &::before,
+		  &::after {
+		    background-color: #fff;
+		  }
+		}
+	}
+}
+
 
 // Media Queries
 //--------------------------------
