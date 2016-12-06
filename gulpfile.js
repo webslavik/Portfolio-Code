@@ -191,7 +191,7 @@ gulp.task('svg-sprite', function() {
 gulp.task('watch', function () {
     gulp.watch('assets/js/**/*.js', ['js-main']).on("change", browserSync.reload);
     gulp.watch('assets/sass/**/*', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*', 'articles/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*', 'articles/*.html', 'about/*.html'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/**/*.jade', ['jade']);
     gulp.watch('assets/img/icon-svg/*', ['svg-sprite']);
 });
