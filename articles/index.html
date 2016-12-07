@@ -4,14 +4,12 @@ title: Blog | SLAVIK SUKHANOV .COM
 innerPageTitle: Статьи
 ---
 
-{% include nav.html %}
-{% include nav-hamburger.html %}
 
 <main class="content js-content">
 	{% include inner-header.html %}
 
 	<div class="container container--posts">
-		{% for post in site.posts %}
+		{% for post in site.categories.articles %}
 			<article class='post'>
 				<h2 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<div class='post-description'>{{ post.description }}</div>

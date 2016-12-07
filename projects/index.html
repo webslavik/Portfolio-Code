@@ -1,0 +1,20 @@
+---
+layout: default
+title: Projects | SLAVIK SUKHANOV .COM
+innerPageTitle: Проекты
+---
+
+
+<main class="content js-content">
+	{% include inner-header.html %}
+
+	<div class="container">
+		{% for project in site.categories.projects %}
+				<h2 class='projects-title'><a href="{{ project.url }}">{{ project.title }}</a></h2>
+			</article>
+		{% endfor %}
+	</div>
+	
+	{% include inner-footer.html %}
+
+</main>
