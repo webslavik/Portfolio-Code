@@ -1567,13 +1567,13 @@ h4 {
 	-----------------------------------------------
 */
 .container--project {
-  margin-bottom: 100px; }
+  margin-bottom: 120px; }
 
 .projects-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-align: center; }
   .projects-title a {
-    font-size: 2.5rem;
+    font-size: 2.1875rem;
     color: #222222;
     text-decoration: none; }
 
