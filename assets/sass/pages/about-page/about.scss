@@ -4,3 +4,99 @@
 	-----------------------------------------------
 */
 
+.container--about {
+	margin-bottom: 120px;
+}
+
+
+.about-title {
+	margin-bottom: 30px;
+	font-size: rem(40);
+	font-weight: 600;
+	// letter-spacing: 1.8px;
+}
+
+.about-skills-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	// background-color: green;
+	width: 33.3333%;
+	margin-bottom: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	.title {
+		font-size: rem(22);
+		font-weight: 600;
+
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 7px;
+			height: 7px;
+			position: absolute;
+			top: 50%;
+			left: -17px;
+			transform: translateY(-50%);
+			background-color: #c9c8c8;
+		}
+	}
+
+	.descr {
+		font-size: rem(16);
+
+		.bold {
+			font-weight: 600;
+			text-decoration: underline;
+		}
+	}
+
+}
+
+
+
+
+// Media Queries
+//--------------------------------
+@include breakpoint($desktop) {
+
+	.skill {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+}
+
+@include breakpoint($tablet) {
+
+	.about-skills-wrap {
+		justify-content: space-around;
+
+	}
+
+	.skill {
+		width: 45%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+}
+
+@include breakpoint($tablet) {
+
+	.about-skills-wrap {
+
+	}
+
+	.skill {
+		max-width: 580px;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 0px;
+	}
+
+}

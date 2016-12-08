@@ -1561,6 +1561,67 @@ h4 {
 		ABOUT PAGE
 	-----------------------------------------------
 */
+.container--about {
+  margin-bottom: 120px; }
+
+.about-title {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600; }
+
+.about-skills-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.skill {
+  width: 33.3333%;
+  margin-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px; }
+  .skill .title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    position: relative; }
+    .skill .title:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 50%;
+      left: -17px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      background-color: #c9c8c8; }
+  .skill .descr {
+    font-size: 1rem; }
+    .skill .descr .bold {
+      font-weight: 600;
+      text-decoration: underline; }
+
+@media (max-width: 1200px) {
+  .skill {
+    padding-left: 25px;
+    padding-right: 25px; } }
+
+@media (max-width: 1024px) {
+  .about-skills-wrap {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .skill {
+    width: 45%;
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+@media (max-width: 1024px) {
+  .skill {
+    max-width: 580px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 0px; } }
+
 /* 
 	-----------------------------------------------
 		PROJECTS PAGE

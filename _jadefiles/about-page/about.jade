@@ -1,0 +1,37 @@
+- var language = ['HTML', 'CSS', 'JavaSctipt']
+- var framework = ['AngularJS', 'Bootstrap', 'Foundation']
+
+- var tech = ['HTML / Jade', 'CSS / Sass', 'JavaSctipt / jQuery', 'AngularJS', 'Bootstrap', 'Foundation', 'Gulp', 'Photoshop / Illustrator', 'Git', 'Jekyll']
+
+// begin about
+
+
+
+
+h2.about-title Мои умения
+.about-skills-wrap
+	- var i = 0;
+	while (i++ < tech.length)
+		.skill
+			.title #{tech[i-1]}
+			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores 
+				span.bold aliquid 
+				| ipsa?
+
+//- .about-skills-wrap
+//- 	- var f = 0;
+//- 	while (f++ < framework.length)
+//- 		.skill
+//- 			.title #{framework[f-1]}
+//- 			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores 
+//- 				span.bold aliquid 
+//- 				| ipsa?
+
+//- .about-skills-wrap
+//- 	- var i = 0;
+//- 	while (i++ < 5)
+//- 		.skill
+//- 			.title HTML/CSS
+//- 			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores aliquid ipsa?
+
+// end about
