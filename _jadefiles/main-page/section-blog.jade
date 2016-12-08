@@ -1,3 +1,6 @@
+include ../mixins/_include
+
+
 - var text = [' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, sunt!', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, voluptate quasi nam ea consequatur ad iste cupiditate nobis!', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id recusandae laboriosam earum.', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis illum dolorem hic quod, assumenda quo, accusantium ex deserunt. Aliquam, necessitatibus?', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, dicta.', ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad labore doloremque nostrum eaque cum, odio!']
 
 // begin blog main page
@@ -25,7 +28,6 @@ section.m-blog
 						.read &#8210; Read
 
 		.m-blog-btn-wrap
-			a(href="blog.html").btn
-				span Read more
+			+btn('/articles/', 'Read More')
 
 // end blog main page

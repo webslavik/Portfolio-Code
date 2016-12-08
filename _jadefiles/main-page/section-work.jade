@@ -1,4 +1,4 @@
-include ../svg-mixin/_svg-sprite.jade
+include ../mixins/_include
 
 // begin work main page
 
@@ -9,15 +9,12 @@ section.m-work
 
 		.m-work-icons
 			.m-work-icon
-				//- .icon
 				+icon('marker', 'icon-marker--mod')
 				.title Prototyping 
 			.m-work-icon.icon-design
-				//- .icon
 				+icon('layers', 'icon-layers--mod')
 				.title Design
 			.m-work-icon
-				//- .icon
 				+icon('code', 'icon-code--mod')
 				.title Development 
 
@@ -37,8 +34,7 @@ section.m-work
 					.cover(style='background-color: #{coverColor[i-1]}')
 
 		.m-work-btn-wrap
-			a(href="#link").btn 
-				span View Projects
+			+btn('/projects/', 'View Projects')
 
 
 

@@ -306,12 +306,12 @@ blockquote {
     width: 200px;
     padding-top: 8px;
     padding-bottom: 8px; }
-  .btn:hover:after, .btn:focus:after {
+  .btn:hover .above, .btn:focus .above {
     width: 100%; }
-  .btn:hover span, .btn:focus span {
+  .btn:hover .text, .btn:focus .text {
     -webkit-transform: translateX(15px);
             transform: translateX(15px); }
-  .btn span {
+  .btn .text {
     display: inline-block;
     width: auto;
     font-size: 1.375rem;
@@ -326,7 +326,7 @@ blockquote {
             transform: translateX(-5px);
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
             transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .btn:after {
+  .btn .above {
     content: '';
     position: absolute;
     left: 0;
@@ -813,6 +813,10 @@ h4 {
   background-color: #70a0af;
   font-size: 5rem;
   color: #f3f3f3; }
+  .i-header-title.title--reset {
+    padding: 0;
+    background-color: transparent;
+    color: #fff; }
 
 @media (max-width: 1024px) {
   .i-header-title {
@@ -1563,7 +1567,7 @@ h4 {
 	-----------------------------------------------
 */
 .container--project {
-  margin-bottom: 90px; }
+  margin-bottom: 100px; }
 
 .projects-title {
   margin-bottom: 50px;
@@ -1604,10 +1608,29 @@ h4 {
   margin-bottom: 60px;
   text-align: right; }
 
+.project-img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 .project-img {
-  border: 1px solid #e6e6e6; }
+  width: 100%;
+  margin-bottom: 20px; }
+  .project-img.img-50 {
+    width: calc(50% - 5px); }
+  .project-img.img-border-none img {
+    border: none; }
+  .project-img img {
+    border: 1px solid #e6e6e6; }
 
 @media (max-width: 768px) {
+  .container--project {
+    margin-bottom: 60px; }
   .project-descr {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1622,4 +1645,6 @@ h4 {
 @media (max-width: 480px) {
   .project-descr li {
     margin-bottom: 30px;
+    width: 100%; }
+  .project-img.img-50 {
     width: 100%; } }

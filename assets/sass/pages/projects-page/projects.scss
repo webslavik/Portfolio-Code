@@ -4,9 +4,9 @@
 	-----------------------------------------------
 */
 
- .container--project {
- 	margin-bottom: 90px;
- }
+.container--project {
+	margin-bottom: 100px;
+}
 
 
 // Title on the Projects Page
@@ -52,21 +52,49 @@
 }
 
 
+//---------------------------------
 .project-btn-wrap {
 	margin-bottom: 60px;
 	text-align: right;
 }
 
 
-.project-img {
-	border: 1px solid #e6e6e6;
+//---------------------------------
+.project-img-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	// @include clearfix();
 }
 
+.project-img {
+	width: 100%;
+	margin-bottom: 20px;
+
+	&.img-50 {
+		width: calc(50% - 5px);
+	}
+
+	&.img-border-none {
+		img {
+			border: none;
+		}
+	}
+
+	img {
+		border: 1px solid #e6e6e6;		
+	}
+}
 
 
 // Media Queries
 //--------------------------------
 @include breakpoint($mobile) {
+	
+	.container--project {
+		margin-bottom: 60px;
+	}
+
 	.project-descr {
 		flex-wrap: wrap;
 		margin-bottom: 20px;
@@ -95,4 +123,9 @@
 		}
 	}
 
+	.project-img {
+		&.img-50 {
+			width: 100%;
+		}
+	}
 }

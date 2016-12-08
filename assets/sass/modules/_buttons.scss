@@ -30,16 +30,16 @@
 
 	&:hover,
 	&:focus {
-		&:after {
+		.above {
 			width: 100%;
 		}
 
-		span {
+		.text {
 			transform: translateX(15px);
 		}
 	}
 
-	span {
+	.text {
 		display: inline-block;
 		width: auto;
 		font-size: rem(22);
@@ -54,7 +54,7 @@
 		transition: all 600ms cubic-bezier(.645,.045,.355,1);
 	}
 
-	&:after {
+	.above {
 		content: '';
 		position: absolute;
 		left: 0;

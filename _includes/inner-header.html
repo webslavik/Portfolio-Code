@@ -1,6 +1,12 @@
 
 <!-- begin inner header-->
-<section class="i-header">
-  <h1 class="i-header-title">{{ page.innerPageTitle }}</h1>
+<section style="background-color: {{page.color}}" class="i-header">
+  <h1 class="i-header-title {{ page.class }}">
+    {% if page.type == 'article' %}
+    {{ page.innerTitle }}
+    {% else %}
+    {{ page.title}}
+    {% endif %}
+  </h1>
 </section>
 <!-- end inner header-->

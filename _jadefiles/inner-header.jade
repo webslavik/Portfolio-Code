@@ -1,6 +1,11 @@
 // begin inner header
 
-section.i-header
-		h1.i-header-title {{ page.innerPageTitle }}
+section.i-header(style='background-color: {{page.color}}')
+		h1.i-header-title(class='{{ page.class }}')
+			{% if page.type == 'article' %}
+			{{ page.innerTitle }}
+			{% else %}
+			{{ page.title}}
+			{% endif %}
 
 // end inner header
