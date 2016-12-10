@@ -4,30 +4,31 @@ include ../mixins/_include
 
 section.m-about
 	.container
-		h2.section-title About
+		h2.section-title Обо мне
 
 		.m-about-row.m-about-row--m-bottom
-			.m-about-left-column
-				.m-about-foto
+			p.m-about-name Привет, меня зовут Славик.
+				br
+				| Я занимаюсь веб разработкой в&nbsp;направлении frontend.
+			
+			.m-about-text
+				p.m-about-p Мое знакомство с вебом началось в 2014 году. Однажды меня заинтересовало как он&nbsp;устроен, из чего состоит и какие возможности дает. По началу это являлось моим хобби, но со временем перерасло в большее и стало моей основной деятельностью. 
+				p.m-about-p Веб очень быстро развивается и это подталкивает на собственное развитие. Изучение новых технологий, совершенствование навыков, создание более качественного продукта - то, к чему я стремлюсь. Я могу с уверенностью сказать, что нашел то, чем хочу заниматься все время.
 
-			.m-about-right-column
-				.m-about-text
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi uconsequat. 
-					p  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				.m-about-btn-wrap
-					+btn('/about/' ,'Читать Дальше')
 
 		.m-about-row.m-about-row--center
 			ul.m-about-skills
-				- var title = ['Communication', 'Learning', 'Planning', 'Programming', 'Design', 'Organization']
+				//- var title = ['Communication', 'Learning', 'Planning', 'Programming', 'Design', 'Organization']
+				- var title = ['Каммуникабельность', 'Обучение', 'Планирование', 'Программирование', 'Дизайн', 'Организованность']
+				- var percentage = ['85', '81', '85', '87', '64', '80']
 				- var i = -1;
 				while (i++ < title.length -1)
 					li
 						.skills-bar-title #{title[i]}
 						.skills-bar
-							.skills-inner-bar(style='width: 80%')
+							.skills-inner-bar(style='width: #{percentage[i]}%')
 
-
+		.m-about-btn-wrap
+			+btn('/about/' ,'Читать Дальше')
 
 // end about main page

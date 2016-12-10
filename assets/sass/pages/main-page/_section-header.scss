@@ -29,29 +29,33 @@
 // Title
 //--------------------------------
 .m-header-title {
-	padding: 15px 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-family: $roboto;
 	font-weight: 900;
 	letter-spacing: 8px;
 	line-height: 68px;
-	user-select: none;
 	color: $grey;
 
 	&.title--first,
 	&.title--second {
-		background-color: $primary;
 		font-size: rem(80);
+		background-color: $primary;
+		text-align: center;
 	}
 
 	&.title--first {
+		width: 355px;
 		position: relative;
 		bottom: -15px;
 		margin-left: -180px;
 	}
 
 	&.title--second {
+		width: 460px;
 		margin-left: 30px;
 		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -69,8 +73,8 @@
 @include breakpoint($tablet) {
 
 	.m-header-title {
-		padding: 10px 45px;
-		line-height: 68px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		letter-spacing: 7px;
 
 		&.title--first,
@@ -79,7 +83,12 @@
 		}
 
 		&.title--first {
+			width: 320px;
 			margin-left: -165px;
+		}
+		&.title--second {
+			width: 420px;
+			padding-bottom: 15px;
 		}
 	}
 }
@@ -95,7 +104,7 @@
 
 	
 	.m-header-title {
-		padding: 0px 30px;
+		padding: 0px;
 		letter-spacing: 4.5px;
 
 		&.title--first,
@@ -104,17 +113,20 @@
 		}
 
 		&.title--first {
+			width: 220px;
 			margin-left: -110px;
 		}
 
 		&.title--second {
+			width: 290px;
 			margin-left: 20px;
+			padding-bottom: 0;
 		}
 	}
 
 	.m-header-position {
-		font-size: rem(24);
-		letter-spacing: 2.4px;
+		font-size: rem(22);
+		letter-spacing: 2.2px;
 	}
 
 }
@@ -124,13 +136,26 @@
 
 	
 	.m-header-title {
-		padding: 0px 30px;
 		letter-spacing: 4px;
 
 		&.title--first,
 		&.title--second {
 			font-size: rem(40);
 		}
+
+		&.title--first {
+			width: 200px;
+			margin-left: -90px;
+		}
+
+		&.title--second {
+			width: 260px;
+		}
+	}
+
+	.m-header-position {
+		font-size: rem(20);
+		letter-spacing: 2px;
 	}
 
 

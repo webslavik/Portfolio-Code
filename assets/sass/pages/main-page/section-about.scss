@@ -17,48 +17,36 @@
 	}
 
 	&--m-bottom {
-		margin-bottom: 80px;
+		margin-bottom: 70px;
 	}
 }
 
-.m-about-left-column,
-.m-about-right-column {
-	width: 50%;
-}
 
-.m-about-right-column {
-	padding-top: 50px;
-}
-
-// Foto and Text
+// Text
 //--------------------------------
-.m-about-foto {
-	width: 380px;
-	height: 380px;
-	background-image: url(../img/jpg/my-test.jpeg);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: cover;
-	border-radius: 50%;
+
+
+.m-about-name {
+	width: 42%;
+	margin-bottom: 25px;
+	padding-right: 30px;
+	font-size: rem(26);
+	text-align: right;
 }
 
 
 .m-about-text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 65px;
-	font-size: 18px;
-	
+	width: 50%;
+	padding-left: 20px;
+	font-size: rem(20);
+	color: lighten($dark, 20%);
+	line-height: 32px;
+
 	p:first-child {
-		margin-bottom: 35px;
+		margin-bottom: 20px;
 	}
 }
 
-.m-about-btn-wrap {
-	text-align: right;
-}
 
 
 // Skills
@@ -66,11 +54,12 @@
 .m-about-skills {
 	@include list();
 	
-	max-width: 640px;
+	max-width: 660px;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 70px;
 
 	li {
 		margin-bottom: 12px;
@@ -79,11 +68,11 @@
 
 .skills-bar-title {
 	margin-bottom: 5px;
-	font-size: rem(16);
+	font-size: rem(17);
 }
 
 .skills-bar {
-	width: 270px;
+	width: 280px;
 	height: 8px;
 	background-color: #e6e6e6;
 	position: relative;
@@ -100,34 +89,51 @@
 }
 
 
+// Btn wrap
+//--------------------------------
+.m-about-btn-wrap {
+	text-align: center;
+}
+
+
 // Media Queries
 //--------------------------------
 @include breakpoint($tablet) {
-	
+
 	.m-about-row {
-		&--m-bottom {
-			margin-bottom: 70px;
-		}
+		flex-direction: column;
 	}
 
-	.m-about-right-column {
-		padding-top: 0px;
+	//------------------------------
+	.m-about-name,
+	.m-about-text {
+		width: 100%;
+		padding: 0;
+	}
+
+	.m-about-name {
+		text-align: left;
 	}
 
 	//--------------------------------
-	.m-about-foto {
-		width: 320px;
-		height: 320px;
+	.m-about-skills {
+		margin: 0 auto 70px;
 	}
 
-	.m-about-text {
-		margin-bottom: 50px;
-	}
+
 }
 
 
 @include breakpoint($mobile) {
 
+
+	.m-about-row {
+		&--m-bottom {
+			margin-bottom: 50px;
+		}
+	}
+	
+	//--------------------------------
 	.m-about {
 		margin-bottom: 100px;
 	}
@@ -136,23 +142,10 @@
 		flex-direction: column;
 	}
 
-	.m-about-left-column,
-	.m-about-right-column {
-		width: 100%;
-	}
-
-
 	//--------------------------------
-	.m-about-foto {
-		width: 240px;
-		height: 240px;
-		margin: 0 auto 30px;
-	}
-
-	.m-about-text {
-		p:first-child {
-			margin-bottom: 15px;
-		}
+	.m-about-name {
+		padding-right: 0px;
+		text-align: left;
 	}
 
 	.m-about-btn-wrap {
@@ -163,7 +156,7 @@
 	.m-about-skills {
 		max-width: 400px;
 		display: block;
-		margin: 0 auto;
+		margin-bottom: 55px;
 	}
 
 	.skills-bar {
@@ -173,6 +166,7 @@
 		position: relative;
 	}
 }
+
 
 @include breakpoint($extraMobile) {
 	.m-about-skills {
