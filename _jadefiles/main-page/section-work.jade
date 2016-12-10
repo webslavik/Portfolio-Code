@@ -29,17 +29,15 @@ section.m-work
 			- var i = 0;
 			while (i++ < 6)
 
-				a(href="#{link[i-1]}").m-work-item(style='background-image: url(assets/img/#{logos[i-1]}); background-color: #{coverColor[i-1]}; background-size: #{logosSize[i-1]}%;')
+				a(href="#{link[i-1]}").m-work-item
+					.item-background(style='background-image: url(assets/img/#{logos[i-1]}); background-color: #{coverColor[i-1]}; background-size: #{logosSize[i-1]}%;')
 					.item-meta
 						.title #{projName[i-1]}
-						.descr #code
-					.cover(style='background-color: #{coverColor[i-1]}')
+						.descr #frontend
+					.item-cover(style='background-color: #{coverColor[i-1]}')
 
 		.m-work-btn-wrap
-			+btn('/projects/', 'View Projects')
-
-
-
+			+btn('/projects/', 'Смотреть Еще')
 
 
 // end work main page
