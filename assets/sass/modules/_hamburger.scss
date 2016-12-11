@@ -18,14 +18,58 @@
 }
 
 
+
+//-----------------------------
 .hamburger--collapse-r {
+	overflow: hidden;
+
+	.hamburger-inner {
+		transition: all 400ms cubic-bezier(.645,.045,.355,1);
+
+		&:before,
+		&:after {
+			transition: all 600ms cubic-bezier(.645,.045,.355,1);
+		}
+
+		&:before {
+			transition-delay: 150ms;
+		}
+
+		&:after {
+			transition-delay: 250ms;
+		}
+	}
+
 	&.is-active {
+
 		.hamburger-inner {
-		  &,
+	    background: #fff;
 		  &::before,
 		  &::after {
-		    background-color: #fff;
+		  	background: #fff;
 		  }
+		}
+	}
+
+	&.is-hide {
+		pointer-events: none;
+
+		.hamburger-inner {
+			transition-delay: 400ms;
+			transform: translateX(60px);
+
+			&:after,
+			&:before {
+				transform: translateX(60px);
+			}
+
+			// &:before {
+			// 	transition-delay: 400ms;
+			// }
+
+			// &:after {
+			// 	transition-delay: 200ms;
+			// }
 		}
 	}
 }
@@ -41,21 +85,20 @@
 
 @include breakpoint($mobile) {
 	.p-hamburger {
-		padding-top: 25px;
+		padding-top: 15px;
 		padding-right: 10px;
 	}
 
-	.hamburger--collapse-r {
-		&.is-active {
-			.hamburger-inner {
-			  &,
-			  &::before,
-			  &::after {
-			    background-color: #fff;
-			  }
-			}
-		}
-	}
+	// .hamburger--collapse-r {
+	// 	&.is-active {
+	// 		.hamburger-inner {
+	// 		  &::before,
+	// 		  &::after {
+	// 		    background-color: #fff;
+	// 		  }
+	// 		}
+	// 	}
+	// }
 
 
 }

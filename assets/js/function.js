@@ -11,6 +11,7 @@ var myModule = (function() {
 
 	// кешируем элементы
 	var $window = $(window),
+			$pageWrap = $('.page-wrap'),
 			$content = $('.js-content'),
 			$navigation = $('.js-navigation'),
 			$hamburger = $('.js-hamburger');
@@ -23,7 +24,7 @@ var myModule = (function() {
 		svg4everybody({}); 
 		//-----------------------
 		_showMenu();
-		// _actionHamburger();
+		_actionHamburger();
 	};
 	//-------------------------------------------------------------------
 
@@ -48,13 +49,19 @@ var myModule = (function() {
   //-------------------------------------------------------------------
 	function _actionHamburger() {
 
-		$(window).scroll(function() {
-			// var wScroll = $(window).scrollTop();
-			// console.log(wScroll);
-			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-      	alert("bottom!");
-       // getData();
-	   }
+		var i = $(this).scrollTop();
+		$pageWrap.scroll(function() {
+
+			var wScroll = $(this).scrollTop();
+
+			if ( wScroll > i ) {
+				i = wScroll;
+				$hamburger.addClass('is-hide');
+			} else if ( wScroll < i ){
+				i = wScroll;
+				$hamburger.removeClass('is-hide');
+			}
+			
 		});
 		
 	}

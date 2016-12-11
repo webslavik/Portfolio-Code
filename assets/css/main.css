@@ -666,8 +666,34 @@ h4 {
   z-index: 10;
   text-align: right; }
 
-.hamburger--collapse-r.is-active .hamburger-inner, .hamburger--collapse-r.is-active .hamburger-inner::before, .hamburger--collapse-r.is-active .hamburger-inner::after {
-  background-color: #fff; }
+.hamburger--collapse-r {
+  overflow: hidden; }
+  .hamburger--collapse-r .hamburger-inner {
+    -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+    .hamburger--collapse-r .hamburger-inner:before, .hamburger--collapse-r .hamburger-inner:after {
+      -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+              transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+    .hamburger--collapse-r .hamburger-inner:before {
+      -webkit-transition-delay: 150ms;
+              transition-delay: 150ms; }
+    .hamburger--collapse-r .hamburger-inner:after {
+      -webkit-transition-delay: 250ms;
+              transition-delay: 250ms; }
+  .hamburger--collapse-r.is-active .hamburger-inner {
+    background: #fff; }
+    .hamburger--collapse-r.is-active .hamburger-inner::before, .hamburger--collapse-r.is-active .hamburger-inner::after {
+      background: #fff; }
+  .hamburger--collapse-r.is-hide {
+    pointer-events: none; }
+    .hamburger--collapse-r.is-hide .hamburger-inner {
+      -webkit-transition-delay: 400ms;
+              transition-delay: 400ms;
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px); }
+      .hamburger--collapse-r.is-hide .hamburger-inner:after, .hamburger--collapse-r.is-hide .hamburger-inner:before {
+        -webkit-transform: translateX(60px);
+                transform: translateX(60px); }
 
 @media (max-width: 1024px) {
   .p-hamburger {
@@ -675,10 +701,8 @@ h4 {
 
 @media (max-width: 768px) {
   .p-hamburger {
-    padding-top: 25px;
-    padding-right: 10px; }
-  .hamburger--collapse-r.is-active .hamburger-inner, .hamburger--collapse-r.is-active .hamburger-inner::before, .hamburger--collapse-r.is-active .hamburger-inner::after {
-    background-color: #fff; } }
+    padding-top: 15px;
+    padding-right: 10px; } }
 
 /* 
 	-------------------------------------------
