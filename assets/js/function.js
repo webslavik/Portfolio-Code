@@ -56,7 +56,10 @@ var myModule = (function() {
 
 			if ( wScroll > i ) {
 				i = wScroll;
-				$hamburger.addClass('is-hide');
+
+				if(!($content.hasClass('is-move')))
+					$hamburger.addClass('is-hide');
+		
 			} else if ( wScroll < i ){
 				i = wScroll;
 				$hamburger.removeClass('is-hide');
