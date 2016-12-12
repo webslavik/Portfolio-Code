@@ -1,0 +1,61 @@
+/* 
+	-------------------------------------------
+		PRELOADER
+	-------------------------------------------
+*/
+
+.preloader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 15;
+
+	background-color: #fff;
+}
+
+.spinner {
+  width: rem(60);
+  height: 0; 
+  opacity: 1;
+  transition: visibility, opacity;
+  transition-duration: 0s, 0.3s;
+  transition-delay: 0.3s, 0s; 
+  background-color: #fff;
+  position: relative;
+
+	.circle {
+	  width: rem(60);
+	  height: rem(60);
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  border: 0 solid $raspberry;
+	  border-radius: 50%;
+	  animation: loader 1.30s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+}
+
+
+@keyframes loader {
+  0% {
+    transform: scale(0); 
+  }
+  30% {
+    transform: scale(1);
+    border-width: 1.875rem; 
+  }
+  70% {
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1);
+    border-width: 0;
+    opacity: 0; 
+  } 
+}
