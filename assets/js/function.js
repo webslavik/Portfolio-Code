@@ -42,6 +42,17 @@ var myModule = (function() {
 			$navigation.removeClass('is-move');
 			$hamburger.removeClass('is-active');
 		});
+
+		// $('.js-hamburger-section').on('mouseover', function() {
+		// 	if(!($content.hasClass('is-move')))
+		// 			$hamburger.addClass('is-hide');
+				
+		// 	// $hamburger.removeClass('is-hide');
+		// });
+
+		// $('.js-hamburger-section').on('mouseout', function() {
+		// 	$hamburger.addClass('is-hide');
+		// });
 	}
   //-------------------------------------------------------------------
 
