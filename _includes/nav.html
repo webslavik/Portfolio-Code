@@ -2,10 +2,10 @@
 <!-- begin nav-->
 <nav class="p-navigation js-navigation">
   <ul class="p-navigation-list">
-    <li><a href="/" class="is-active">Главная</a></li>
-    <li><a href="/about/">Обо мне</a></li>
-    <li><a href="/projects">Работы</a></li>
-    <li><a href="/articles/">Статьи</a></li>
+    <li><a href="/" {% if page.weight == 1 %}class="is-active"{% endif %}>Главная</a></li>
+    <li><a href="/about/" {% if page.weight == 2 %}class="is-active"{% endif %}>Обо мне</a></li>
+    <li><a href="/projects/" {% if page.weight == 3 %}class="is-active"{% endif %}>Работы</a></li>
+    <li><a href="/articles/" {% if page.weight == 4 %}class="is-active"{% endif %}>Статьи</a></li>
   </ul>
 </nav>
 <!-- end nav-->

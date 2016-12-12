@@ -122,6 +122,23 @@
 		width: 100%;
 	}
 
+	.m-blog-item {
+		
+		&:hover,
+		&:focus {
+			.tag,
+			.title,
+			.descr,
+			.read {
+				transform: translateY(0px);
+			}
+		}
+
+		.read {
+			opacity: 1;
+		}
+	}
+
 }
 
 @include breakpoint($mobile) {
@@ -135,10 +152,6 @@
 	.m-blog-column {
 		max-width: 460px;
 		width: 100%;
-	}
-
-	.m-blog-item {
-		margin-bottom: 25px;
 	}
 
 }
