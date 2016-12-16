@@ -9,9 +9,24 @@ h2,
 h3,
 h4 {
 	font-family: $roboto;
-	font-weight: 900;
+	font-weight: 700;
 }
 
+h1 {
+	font-size: rem(45);
+	line-height: 48px;
+}
+
+h2 {
+	font-size: rem(35);
+	line-height: 38px;
+}
+
+p {
+	margin-bottom: 15px;
+	font-size: rem(18);
+	line-height: 32px;
+}
 
 .section-title {
 	margin-bottom: 70px;
@@ -19,7 +34,7 @@ h4 {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 4.5px;
-
+	font-weight: 900;
 }
 
 

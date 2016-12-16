@@ -6,32 +6,47 @@
 // begin about
 
 
+//- p {{ site.data.about.p_1 }}
+//- p {{ site.data.about.p_2 }}
+//- p {{ site.data.about.p_3 }}
 
+h2.about-title Мои навыки
 
-h2.about-title Мои умения
 .about-skills-wrap
-	- var i = 0;
-	while (i++ < tech.length)
-		.skill
-			.title #{tech[i-1]}
-			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores 
-				span.bold aliquid 
-				| ipsa?
+	.skill
+		.title HTML/Jade
+		.descr  {{ site.data.about.skills.html }}
+	.skill
+		.title CSS/Sass
+		.descr  {{ site.data.about.skills.css }}
+	.skill
+		.title JavaScript/jQuery
+		.descr  {{ site.data.about.skills.js }}
+	.skill
+		.title Angular
+		.descr  {{ site.data.about.skills.angular }}
+	.skill
+		.title Bootstrap
+		.descr  {{ site.data.about.skills.bootstrap }}
+	.skill
+		.title Foundation for Emails
+		.descr  {{ site.data.about.skills.email }}
+	.skill
+		.title Gulp
+		.descr  {{ site.data.about.skills.gulp }}
+	.skill
+		.title Photoshop/Illustrator
+		.descr  {{ site.data.about.skills.ps }}
+	.skill
+		.title Bower/npm
+		.descr  {{ site.data.about.skills.bower }}
+	.skill
+		.title Git
+		.descr  {{ site.data.about.skills.git }}
+	.skill
+		.title Jekyll
+		.descr  {{ site.data.about.skills.jekyll }}
+			
 
-//- .about-skills-wrap
-//- 	- var f = 0;
-//- 	while (f++ < framework.length)
-//- 		.skill
-//- 			.title #{framework[f-1]}
-//- 			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores 
-//- 				span.bold aliquid 
-//- 				| ipsa?
-
-//- .about-skills-wrap
-//- 	- var i = 0;
-//- 	while (i++ < 5)
-//- 		.skill
-//- 			.title HTML/CSS
-//- 			.descr  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto optio cum maiores aliquid ipsa?
 
 // end about

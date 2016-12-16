@@ -7,28 +7,26 @@ section.m-about
 		h2.section-title Обо мне
 
 		.m-about-row.m-about-row--m-bottom
-			p.m-about-name Привет, меня зовут Славик.
-				br
-				| Я занимаюсь веб разработкой в&nbsp;направлении frontend.
+			p.m-about-name {{ site.data.home.about.main_text }}
 			
 			.m-about-text
-				p.m-about-p Мое знакомство с вебом началось в 2014 году. Однажды меня заинтересовало как он&nbsp;устроен, из чего состоит и какие возможности дает. По началу это являлось моим хобби, но со временем перерасло в большее и стало моей основной деятельностью. 
-				p.m-about-p Веб очень быстро развивается и это подталкивает на собственное развитие. Изучение новых технологий, совершенствование навыков, создание более качественного продукта - то, к чему я стремлюсь. Я могу с уверенностью сказать, что нашел то, чем хочу заниматься все время.
+				p.m-about-p {{ site.data.home.about.paragraph_first }}
+				p.m-about-p {{ site.data.home.about.paragraph_second }}
 
 
-		.m-about-row.m-about-row--center
-			ul.m-about-skills
-				//- var title = ['Communication', 'Learning', 'Planning', 'Programming', 'Design', 'Organization']
-				- var title = ['Каммуникабельность', 'Обучение', 'Планирование', 'Программирование', 'Дизайн', 'Организованность']
-				- var percentage = ['85', '81', '85', '87', '64', '80']
-				- var i = -1;
-				while (i++ < title.length -1)
-					li
-						.skills-bar-title #{title[i]}
-						.skills-bar
-							.skills-inner-bar(style='width: #{percentage[i]}%')
+		//- .m-about-row.m-about-row--center
+		//- 	ul.m-about-skills
+		//- 		//- var title = ['Communication', 'Learning', 'Planning', 'Programming', 'Design', 'Organization']
+		//- 		- var title = ['Каммуникабельность', 'Обучение', 'Планирование', 'Программирование', 'Дизайн', 'Организованность']
+		//- 		- var percentage = ['85', '81', '85', '87', '64', '80']
+		//- 		- var i = -1;
+		//- 		while (i++ < title.length -1)
+		//- 			li
+		//- 				.skills-bar-title #{title[i]}
+		//- 				.skills-bar
+		//- 					.skills-inner-bar(style='width: #{percentage[i]}%')
 
 		.m-about-btn-wrap
-			+btn('/about/' ,'Читать Дальше')
+			+btn('/about/' ,'Узнать Больше')
 
 // end about main page

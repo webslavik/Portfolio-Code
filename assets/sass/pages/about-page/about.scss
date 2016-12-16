@@ -4,16 +4,15 @@
 	-----------------------------------------------
 */
 
-.container--about {
-	margin-bottom: 120px;
+
+.about {
+	p:last-of-type {
+		margin-bottom: 70px;
+	}
 }
 
-
 .about-title {
-	margin-bottom: 30px;
-	font-size: rem(40);
-	font-weight: 600;
-	// letter-spacing: 1.8px;
+	margin-bottom:70px;
 }
 
 .about-skills-wrap {
@@ -23,7 +22,7 @@
 
 .skill {
 	// background-color: green;
-	width: 33.3333%;
+	width: 50%;
 	margin-bottom: 40px;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -78,15 +77,9 @@
 
 	}
 
-	.skill {
-		width: 45%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
 }
 
-@include breakpoint($tablet) {
+@include breakpoint($mobile) {
 
 	.about-skills-wrap {
 

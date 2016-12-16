@@ -191,8 +191,8 @@ blockquote {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container.container--posts {
-    max-width: 780px; }
+  .container.container--thin {
+    max-width: 830px; }
 
 .flex-row {
   display: -webkit-box;
@@ -341,7 +341,7 @@ blockquote {
     bottom: 0;
     z-index: 5;
     width: 0%;
-    background-color: #70a0af;
+    background-color: #e55381;
     -webkit-transition-duration: .6s;
             transition-duration: .6s;
     -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -357,14 +357,28 @@ h2,
 h3,
 h4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 900; }
+  font-weight: 700; }
+
+h1 {
+  font-size: 2.8125rem;
+  line-height: 48px; }
+
+h2 {
+  font-size: 2.1875rem;
+  line-height: 38px; }
+
+p {
+  margin-bottom: 15px;
+  font-size: 1.125rem;
+  line-height: 32px; }
 
 .section-title {
   margin-bottom: 70px;
   font-size: 2.8125rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 4.5px; }
+  letter-spacing: 4.5px;
+  font-weight: 900; }
 
 @media (max-width: 768px) {
   .section-title {
@@ -380,7 +394,7 @@ h4 {
   padding-top: 15px;
   padding-left: 25px;
   padding-bottom: 15px;
-  border-left: 4px solid #70a0af;
+  border-left: 4px solid #e55381;
   background: #f3f3f3;
   overflow-x: auto; }
   .highlight pre {
@@ -873,9 +887,9 @@ h4 {
     -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
             transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1); }
     .p-navigation-list a:hover {
-      color: #70a0af; }
+      color: #e55381; }
     .p-navigation-list a.is-active {
-      color: #70a0af; }
+      color: #e55381; }
 
 @media (max-width: 1024px) {
   .p-navigation {
@@ -923,7 +937,7 @@ h4 {
   letter-spacing: 8px;
   line-height: 68px;
   text-align: center;
-  background-color: #70a0af;
+  background-color: #e55381;
   font-size: 5rem;
   color: #f3f3f3; }
   .i-header-title.title--reset {
@@ -1013,7 +1027,7 @@ h4 {
   color: #f3f3f3; }
   .m-header-title.title--first, .m-header-title.title--second {
     font-size: 5rem;
-    background-color: #70a0af;
+    background-color: #e55381;
     text-align: center; }
   .m-header-title.title--first {
     width: 355px;
@@ -1153,7 +1167,7 @@ h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #70a0af; }
+  background-color: #e55381; }
 
 .m-about-btn-wrap {
   text-align: center; }
@@ -1419,7 +1433,7 @@ h4 {
   .m-blog-item .read {
     font-family: "Roboto", sans-serif;
     font-size: 0.875rem;
-    color: #70a0af;
+    color: #e55381;
     -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
             transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
     opacity: 0;
@@ -1579,7 +1593,7 @@ h4 {
 
 .post-tag {
   font-size: 0.875rem;
-  color: #70a0af; }
+  color: #e55381; }
 
 .post-btn-wrap {
   text-align: right; }
@@ -1604,23 +1618,9 @@ h4 {
 	-----------------------------------------------
 */
 .article {
-  margin-bottom: 150px;
-  font-size: 1.125rem; }
-  .article h1,
-  .article h2,
-  .article h3,
-  .article h4 {
-    font-weight: 700; }
+  margin-bottom: 150px; }
   .article h1 {
-    margin-bottom: 10px;
-    font-size: 2.8125rem;
-    line-height: 48px; }
-  .article h2 {
-    font-size: 2.1875rem;
-    line-height: 38px; }
-  .article p {
-    margin-bottom: 15px;
-    line-height: 32px; }
+    margin-bottom: 10px; }
 
 .article-date-tag {
   margin-bottom: 33px; }
@@ -1630,7 +1630,7 @@ h4 {
 
 .article-tag {
   font-size: 0.875rem;
-  color: #70a0af; }
+  color: #e55381; }
 
 .blockquote {
   margin-bottom: 45px;
@@ -1659,13 +1659,11 @@ h4 {
 		ABOUT PAGE
 	-----------------------------------------------
 */
-.container--about {
-  margin-bottom: 120px; }
+.about p:last-of-type {
+  margin-bottom: 70px; }
 
 .about-title {
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-  font-weight: 600; }
+  margin-bottom: 70px; }
 
 .about-skills-wrap {
   display: -webkit-box;
@@ -1675,7 +1673,7 @@ h4 {
       flex-wrap: wrap; }
 
 .skill {
-  width: 33.3333%;
+  width: 50%;
   margin-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px; }
@@ -1707,13 +1705,9 @@ h4 {
 @media (max-width: 1024px) {
   .about-skills-wrap {
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
-  .skill {
-    width: 45%;
-    padding-left: 10px;
-    padding-right: 10px; } }
+        justify-content: space-around; } }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .skill {
     max-width: 580px;
     width: 100%;
