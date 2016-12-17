@@ -1,0 +1,60 @@
+/* 
+	-------------------------------------------
+		POST AND PROJECT NAVIGATION
+	-------------------------------------------
+*/
+
+.page-nav {
+	position: fixed;
+	top: auto;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+
+	display: flex;
+	justify-content: space-between;
+
+	padding: 8px 45px;
+	background-color: #fff;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+}
+
+.back {
+	display: inline-block;
+	font-family: $roboto;
+	color: $dark;
+	text-decoration: none;
+
+	background-color: tomato;
+}
+
+
+.nav-arrows {
+
+	a {
+		display: inline-block;
+		padding: 5px;
+		font-size: 0;
+
+		&:hover,
+		&:focus {
+			.arrow-left--mod,
+			.arrow-right--mod {
+				color: $dark;
+			}
+		}
+	}
+
+	a:last-child {
+		margin-left: 10px;
+	}
+}
+
+.arrow-left--mod,
+.arrow-right--mod {
+	font-size: rem(22);
+	color: lighten($dark, 40%);
+	transition: color 100ms ease-in;
+}

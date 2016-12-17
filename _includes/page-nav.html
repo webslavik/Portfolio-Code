@@ -1,0 +1,14 @@
+
+<!-- begin page navigation-->
+<div class="page-nav"><a href="/articles" class="back">Вернуться к списку </a>
+  <div class="nav-arrows">{% if page.previous.url %}<a href="{{ page.previous.url }}" title="prev"> 
+      <svg class="icon icon-arrow-left arrow-left--mod">
+        <use xlink:href="/assets/img/svg-sprite.svg#arrow-left"></use>
+      </svg></a>{% endif %}
+    {% if page.next.url %}<a href="{{ page.next.url }}" title="next"> 
+      <svg class="icon icon-arrow-right arrow-right--mod">
+        <use xlink:href="/assets/img/svg-sprite.svg#arrow-right"></use>
+      </svg></a>{% endif %}
+  </div>
+</div>
+<!-- end page navigation-->

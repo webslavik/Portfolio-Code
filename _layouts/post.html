@@ -5,12 +5,15 @@ innerPageTitle: Статьи
 
 
 <article class="content js-content">
-	{% include inner-header.html %}
+	{% comment %} {% include inner-header.html %} {% endcomment %}
 
 	<div class="container container--thin article">
 		{{ content }}
 	</div>
-	
-	{% include inner-footer.html %}
+
+
+	{% comment %} {% include inner-footer.html %} {% endcomment %}
 
 </article>
+
+{% include page-nav.html %}

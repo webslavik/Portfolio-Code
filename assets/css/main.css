@@ -143,6 +143,14 @@ blockquote {
   height: 1em;
   fill: currentColor; }
 
+.icon-arrow-left {
+  font-size: 2.4rem;
+  width: 1em; }
+
+.icon-arrow-right {
+  font-size: 2.4rem;
+  width: 1em; }
+
 .icon-code {
   font-size: 52.2469rem;
   width: 1.0em; }
@@ -819,6 +827,54 @@ p {
             transform: scale(1);
     border-width: 0;
     opacity: 0; } }
+
+/* 
+	-------------------------------------------
+		POST AND PROJECT NAVIGATION
+	-------------------------------------------
+*/
+.page-nav {
+  position: fixed;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 45px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+
+.back {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  color: #222222;
+  text-decoration: none;
+  background-color: tomato; }
+
+.nav-arrows a {
+  display: inline-block;
+  padding: 5px;
+  font-size: 0; }
+  .nav-arrows a:hover .arrow-left--mod,
+  .nav-arrows a:hover .arrow-right--mod, .nav-arrows a:focus .arrow-left--mod,
+  .nav-arrows a:focus .arrow-right--mod {
+    color: #222222; }
+
+.nav-arrows a:last-child {
+  margin-left: 10px; }
+
+.arrow-left--mod,
+.arrow-right--mod {
+  font-size: 1.375rem;
+  color: #888888;
+  -webkit-transition: color 100ms ease-in;
+          transition: color 100ms ease-in; }
 
 /* 
 	-----------------------------------------------
@@ -1632,12 +1688,13 @@ p {
 	-----------------------------------------------
 */
 .article {
+  padding-top: 100px;
   margin-bottom: 150px; }
   .article h1 {
     margin-bottom: 10px; }
 
 .article-date-tag {
-  margin-bottom: 33px; }
+  margin-bottom: 60px; }
 
 .article-date {
   font-size: 0.8125rem; }
