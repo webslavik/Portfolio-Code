@@ -1,6 +1,9 @@
 
 <!-- begin page navigation-->
-<div class="page-nav"><a href="/articles" class="back">Вернуться к списку </a>
+<div class="page-nav"><a href="/articles" class="back">
+    <svg class="icon icon-arrow arrow--mod">
+      <use xlink:href="/assets/img/svg-sprite.svg#arrow"></use>
+    </svg><span>Все статьи</span></a>
   <div class="nav-arrows">{% if page.previous.url %}<a href="{{ page.previous.url }}" title="prev"> 
       <svg class="icon icon-arrow-left arrow-left--mod">
         <use xlink:href="/assets/img/svg-sprite.svg#arrow-left"></use>

@@ -4,7 +4,9 @@ include mixins/_include
 
 .page-nav
 
-	a(href="/articles").back Вернуться к списку 
+	a(href="/articles").back
+		+icon('arrow', 'arrow--mod')
+		span Все статьи
 
 	.nav-arrows
 		{% if page.previous.url %}

@@ -143,6 +143,10 @@ blockquote {
   height: 1em;
   fill: currentColor; }
 
+.icon-arrow {
+  font-size: 2.4rem;
+  width: 1em; }
+
 .icon-arrow-left {
   font-size: 2.4rem;
   width: 1em; }
@@ -851,11 +855,40 @@ p {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
 
 .back {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Roboto", sans-serif;
   color: #222222;
   text-decoration: none;
-  background-color: tomato; }
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1.6px; }
+  .back:hover span, .back:focus span {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  .back:hover .arrow--mod, .back:focus .arrow--mod {
+    opacity: 1; }
+  .back span {
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+    -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .back .arrow--mod {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1rem;
+    color: #222222;
+    opacity: 0;
+    -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .nav-arrows a {
   display: inline-block;

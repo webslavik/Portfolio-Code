@@ -22,13 +22,43 @@
 }
 
 .back {
-	display: inline-block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	font-family: $roboto;
 	color: $dark;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: rem(16);
+	letter-spacing: 1.6px;
 
-	background-color: tomato;
+	&:hover,
+	&:focus {
+		span{
+			transform: translateX(0px);
+		}
+
+		.arrow--mod {
+			opacity: 1;
+		}
+	}
+
+	span {
+		transform: translateX(-25px);
+		transition: all 200ms cubic-bezier(.645,.045,.355,1);
+	}
+
+	.arrow--mod {
+		display: inline-block;
+		margin-right: 8px;
+		font-size: rem(16);
+		color: $dark;
+		opacity: 0;
+		transition: all 200ms cubic-bezier(.645,.045,.355,1);
+	}
 }
+
 
 
 .nav-arrows {
