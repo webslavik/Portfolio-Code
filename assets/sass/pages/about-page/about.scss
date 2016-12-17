@@ -18,6 +18,11 @@
 .about-skills-wrap {
 	display: flex;
 	flex-wrap: wrap;
+
+	div:nth-last-child(1),
+	div:nth-last-child(2) {
+		margin-bottom: 0;
+	}
 }
 
 .skill {

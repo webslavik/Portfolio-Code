@@ -4,9 +4,9 @@
 	-----------------------------------------------
 */
 
-.container--posts {
-	article:last-child {
-		margin-bottom: 180px;
+.posts {
+	article:last-of-type {
+		margin-bottom: 0;
 	}
 }
 
