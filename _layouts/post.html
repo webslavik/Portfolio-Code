@@ -4,13 +4,11 @@ innerPageTitle: Статьи
 ---
 
 
-<article class="content js-content">
-	{% comment %} {% include inner-header.html %} {% endcomment %}
-
-	<div class="container container--thin article">
+<article class="content js-content article">
+	<div class="container container--thin">
 		{{ content }}
 	</div>
-
+	
+	{% include page-nav.html %}
 </article>
 
-{% include page-nav.html %}

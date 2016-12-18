@@ -204,8 +204,7 @@ blockquote {
   padding-left: 15px;
   padding-right: 15px; }
   .container.container--thin {
-    max-width: 830px;
-    margin-bottom: 150px; }
+    max-width: 830px; }
 
 .flex-row {
   display: -webkit-box;
@@ -837,13 +836,12 @@ p {
 		POST AND PROJECT NAVIGATION
 	-------------------------------------------
 */
-.page-nav {
-  position: fixed;
+.i-post-navigation {
+  position: absolute;
   top: auto;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -908,6 +906,16 @@ p {
   color: #888888;
   -webkit-transition: color 100ms ease-in;
           transition: color 100ms ease-in; }
+
+@media (max-width: 768px) {
+  .i-post-navigation {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .back span {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  .back .arrow--mod {
+    opacity: 1; } }
 
 /* 
 	-----------------------------------------------
@@ -1672,10 +1680,7 @@ p {
 		POSTS PAGE
 	-----------------------------------------------
 */
-.posts article:last-of-type {
-  margin-bottom: 0; }
-
-.post {
+.posts {
   margin-bottom: 90px; }
 
 .post-title {
@@ -1721,8 +1726,9 @@ p {
 	-----------------------------------------------
 */
 .article {
-  padding-top: 100px;
-  margin-bottom: 150px; }
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 100px; }
   .article h1 {
     margin-bottom: 10px; }
 
@@ -1756,7 +1762,7 @@ p {
 
 @media (max-width: 768px) {
   .article {
-    margin-bottom: 90px; } }
+    padding-bottom: 60px; } }
 
 /* 
 	-----------------------------------------------
@@ -1826,8 +1832,8 @@ p {
 		PROJECTS PAGE
 	-----------------------------------------------
 */
-.container--project {
-  margin-bottom: 120px; }
+.project {
+  padding-bottom: 100px; }
 
 .projects-title {
   margin-bottom: 60px;
@@ -1889,8 +1895,8 @@ p {
     border: 1px solid #e6e6e6; }
 
 @media (max-width: 768px) {
-  .container--project {
-    margin-bottom: 60px; }
+  .project {
+    padding-bottom: 60px; }
   .project-descr {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
