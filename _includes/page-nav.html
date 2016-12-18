@@ -1,17 +1,42 @@
 
 <!-- begin page navigation-->
-<div class="page-nav"><a href="/articles" class="back">
+<div class="page-nav"><a href="{{ page.parentLink }}" class="back">
     <svg class="icon icon-arrow arrow--mod">
       <use xlink:href="/assets/img/svg-sprite.svg#arrow"></use>
-    </svg><span>Все статьи</span></a>
-  <div class="nav-arrows">{% if page.previous.url %}<a href="{{ page.previous.url }}" title="prev"> 
-      <svg class="icon icon-arrow-left arrow-left--mod">
-        <use xlink:href="/assets/img/svg-sprite.svg#arrow-left"></use>
-      </svg></a>{% endif %}
-    {% if page.next.url %}<a href="{{ page.next.url }}" title="next"> 
-      <svg class="icon icon-arrow-right arrow-right--mod">
-        <use xlink:href="/assets/img/svg-sprite.svg#arrow-right"></use>
-      </svg></a>{% endif %}
+    </svg><span>{{ page.linkName }}</span></a>
+
+  <div class="nav-arrows">
+  	{% if page.categories %}
+		  {% assign category = page.categories[0] %}
+		  {% assign posts = site.categories[category] %}
+		  {% for post in posts %}
+		    {% if post.url == page.url %}
+		      {% assign post_index0 = forloop.index0 %}
+		      {% assign post_index1 = forloop.index %}
+		    {% endif %}
+		  {% endfor %}
+		  {% for post in posts %}
+		    {% if post_index0 == forloop.index %}
+		      {% assign next_post = post %}
+		    {% endif %}
+		    {% if post_index1 == forloop.index0 %}
+		      {% assign prev_post = post %}
+		    {% endif %}
+		  {% endfor %}
+		{% endif %}
+	  {% if prev_post %}
+	  	<a href="{{ page.previous.url }}" title="prev"> 
+	      <svg class="icon icon-arrow-left arrow-left--mod">
+	        <use xlink:href="/assets/img/svg-sprite.svg#arrow-left"></use>
+	      </svg></a>
+	  {% endif %}
+    {% if next_post %}
+	    <a href="{{ page.next.url }}" title="next"> 
+	      <svg class="icon icon-arrow-right arrow-right--mod">
+	        <use xlink:href="/assets/img/svg-sprite.svg#arrow-right"></use>
+	      </svg>
+	    </a>
+     {% endif %}
   </div>
 </div>
 <!-- end page navigation-->
