@@ -70,7 +70,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	// @include clearfix();
 }
 
 .project-img {
@@ -103,7 +102,7 @@
 
 	
 	.project {
-		padding-bottom: 60px;
+		padding-bottom: 80px;
 	}
 
 	.project-descr {

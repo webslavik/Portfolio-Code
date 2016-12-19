@@ -10,6 +10,11 @@
 	// p:last-of-type {
 	// 	margin-bottom: 70px;
 	// }
+
+	a {
+		text-decoration: none;
+		color: $primary;
+	}
 }
 
 .about-title {
@@ -80,15 +85,15 @@
 
 	.about-skills-wrap {
 		justify-content: space-around;
-
+		margin-bottom: 60px;
 	}
 
 }
 
 @include breakpoint($mobile) {
 
-	.about-skills-wrap {
-
+	.about {
+		margin-bottom: 80px;
 	}
 
 	.skill {
