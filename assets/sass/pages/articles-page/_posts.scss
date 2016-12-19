@@ -7,7 +7,11 @@
 
 
 .posts {
-	margin-bottom: 90px;
+	margin-bottom: 120px;
+
+	article {
+		margin-bottom: 80px;
+	}
 }
 
 .post-title {
@@ -45,15 +49,12 @@
 //--------------------------------
 @include breakpoint($mobile) {
 
-	.container--posts {
+	.posts {
+		margin-bottom: 80px;
 
-		article:last-child {
-			margin-bottom: 120px;
+		article {
+			// margin-bottom: 60px;
 		}
-	}
-
-	.post {
-		margin-bottom: 60px;
 	}
 
 	.post-title {

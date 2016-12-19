@@ -49,46 +49,6 @@
 
 
 
-// Skills
-//--------------------------------
-.m-about-skills {
-	@include list();
-	
-	max-width: 660px;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 70px;
-
-	li {
-		margin-bottom: 12px;
-	}
-}
-
-.skills-bar-title {
-	margin-bottom: 5px;
-	font-size: rem(17);
-}
-
-.skills-bar {
-	width: 280px;
-	height: 8px;
-	background-color: #e6e6e6;
-	position: relative;
-}
-
-.skills-inner-bar {
-	width: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: $primary;
-}
-
-
 // Btn wrap
 //--------------------------------
 .m-about-btn-wrap {
@@ -113,11 +73,6 @@
 
 	.m-about-name {
 		text-align: left;
-	}
-
-	//--------------------------------
-	.m-about-skills {
-		margin: 0 auto 70px;
 	}
 
 
@@ -152,24 +107,4 @@
 		text-align: center;
 	}
 	
-	//--------------------------------
-	.m-about-skills {
-		max-width: 400px;
-		display: block;
-		margin-bottom: 55px;
-	}
-
-	.skills-bar {
-		width: 100%;
-		height: 8px;
-		background-color: #e6e6e6;
-		position: relative;
-	}
-}
-
-
-@include breakpoint($extraMobile) {
-	.m-about-skills {
-		max-width: 100%;
-	}
 }
