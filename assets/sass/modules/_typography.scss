@@ -38,6 +38,11 @@ p {
 }
 
 
+.highlights {
+	color: #4285C2;
+}
+
+
 // Media Queries
 //--------------------------------
 @include breakpoint($mobile) {

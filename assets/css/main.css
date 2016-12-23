@@ -392,6 +392,9 @@ p {
   letter-spacing: 4.5px;
   font-weight: 900; }
 
+.highlights {
+  color: #4285C2; }
+
 @media (max-width: 768px) {
   .section-title {
     margin-bottom: 40px; } }
@@ -1750,6 +1753,7 @@ p {
 	-----------------------------------------------
 */
 .article {
+  min-height: 100vh;
   position: relative;
   padding-bottom: 100px;
   padding-top: 100px; }
@@ -1757,7 +1761,7 @@ p {
     margin-bottom: 10px; }
 
 .article-date-tag {
-  margin-bottom: 60px; }
+  margin-bottom: 50px; }
 
 .article-date {
   font-size: 0.8125rem; }
@@ -1786,6 +1790,7 @@ p {
 
 @media (max-width: 768px) {
   .article {
+    padding-top: 50px;
     padding-bottom: 60px; } }
 
 /* 

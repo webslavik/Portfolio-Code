@@ -1,0 +1,90 @@
+---
+layout: post
+title: Jekyll и навигация между постами
+type: article
+weight: 4
+linkName: Все статьи
+parentLink: '/articles'
+categories: articles jekyll
+description: Небольшая статья про навигацию в Jekyll и возможность осуществлять ее в разных категориях.
+---
+
+<h1>Jekyll и навигация между постами</h1>
+<div class="article-date-tag">
+	<span class="article-date">{{ page.date | date: "%d.%m.%Y" }} / </span>
+	<span class="article-tag">{{ page.categories[1] }}</span>
+</div>
+
+
+<p>
+Сделать навигацию между постами в Jekyll довольно просто. Воспользуемся для этого глобальной переменной <span class="highlights">page</span> и переменными поста <span class="highlights">previous</span> и <span class="highlights">next</span>.
+</p>
+
+{% highlight html %}
+{% raw %}
+<nav>
+ <a href="{{ page.previous.url }}">Prev</a>
+ <a href="{{ page.next.url }}">Next</a>
+</nav>
+{% endraw %}
+{% endhighlight %}
+
+<p>
+Тем не менее пользователь находясь на странице последнего поста, будет видеть возможность перейти к следующему, которого нет. Та же ситуация и с первым постом.
+<br>
+Исправить это можно воспользовавшись <span class="highlights">if</span>:
+</p>
+
+
+{% highlight html %}
+{% raw %}
+<nav>
+ {% if page.previous.url %}
+  <a href="{{ page.previous.url }}">Prev</a>
+ {% endif %}
+ {% if page.next.url %}
+  <a href="{{ page.next.url }}">Next</a>
+ {% endif %}
+</nav>
+{% endraw %}
+{% endhighlight %}
+
+<p>Таким образом, если  <span class="highlights">previous</span> или  <span class="highlights">next</span> возвращают  <span class="highlights">nil</span>, то ссылка находящаяся между  <span class="highlights">if</span> не отобразится. 
+</p>
+
+<p>Я использую посты не только для статей, но и для вывода работ. Структура папки <span class="highlights">_post</span> выглядит таким образом:
+</p>
+
+{% highlight html %}
+| _post/
+  /-- articles/
+  /-- projects/
+{% endhighlight %}
+
+<p>Применяя вышеописанную навигацию по постам, столкнулся с проблемой, когда есть возможность перейти со статей в работы и обратно. Поэтому потребовалось это устранить.
+<br>
+Код приведенный ниже решаем эту задачу:
+</p>
+
+{% highlight html %}
+{% raw %}
+{% if page.categories %}
+  {% assign category = page.categories[0] %}
+  {% assign posts = site.categories[category] %}
+  {% for post in posts %}
+    {% if post.url == page.url %}
+      {% assign post_index0 = forloop.index0 %}
+      {% assign post_index1 = forloop.index %}
+    {% endif %}
+  {% endfor %}
+  {% for post in posts %}
+    {% if post_index0 == forloop.index %}
+      {% assign next_post = post %}
+    {% endif %}
+    {% if post_index1 == forloop.index0 %}
+      {% assign prev_post = post %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% endraw %}
+{% endhighlight %}

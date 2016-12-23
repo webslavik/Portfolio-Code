@@ -5,6 +5,7 @@
 */
 
 .article {
+	min-height: 100vh;
 	position: relative;
 	padding-bottom: 100px;
 	padding-top: 100px;
@@ -15,11 +16,10 @@
 }
 
 
-
 // Date and Tag
 //--------------------------------
 .article-date-tag {
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 
 .article-date {
@@ -62,6 +62,7 @@
 @include breakpoint($mobile) {
 	
 	.article {
+		padding-top: 50px;
 		padding-bottom: 60px;
 	}
 

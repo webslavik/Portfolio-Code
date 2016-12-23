@@ -15,8 +15,8 @@ weight: 4
 				<h2 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<div class='post-description'>{{ post.description }}</div>
 				<div class='post-date-tag-wrap'>
-					<span class="post-date">{{ post.date | date_to_string }} /</span>
-					<span class="post-tag">#{{ post.categories }}</span>
+					<span class="post-date">{{ post.date | date: "%d.%m.%Y" }} /</span>
+					<span class="post-tag">#{{ post.categories[1] }}</span>
 				</div>
 				<div class='post-btn-wrap'>
 					<a href="{{ post.url }}" class="btn btn--post">
