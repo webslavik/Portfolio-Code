@@ -11,21 +11,19 @@ section.m-blog
 
 		.m-blog-row
 			.m-blog-column
-				- var i = 0;
-				while (i++ < 3)
-					a(href="#link").m-blog-item
-						.tag #javascript
-						.title Blog article title
-						.descr  #{text[i-1]}
-						.read &#8210; Read
+				a(href="{{ site.data.homePost.one.link }}").m-blog-item
+					.tag {{ site.data.homePost.one.tag }}
+					.title {{ site.data.homePost.one.title }}
+					.descr  {{ site.data.homePost.one.description }}
+					.read &#8210; Read
 			.m-blog-column
 				- var z = 3;
 				while (z++ < 6)
-					a(href="#link").m-blog-item
-						.tag #javascript
-						.title Blog article title
-						.descr  #{text[z-1]}
-						.read &#8210; Read
+					//- a(href="#link").m-blog-item
+					//- 	.tag #javascript
+					//- 	.title Blog article title
+					//- 	.descr  #{text[z-1]}
+					//- 	.read &#8210; Read
 
 		.m-blog-btn-wrap
 			+btn('/articles/', 'Читать Все')

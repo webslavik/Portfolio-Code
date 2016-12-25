@@ -1558,11 +1558,13 @@ p {
     font-family: "Roboto", sans-serif;
     font-weight: 500; }
   .m-blog-item .tag {
+    margin-bottom: 10px;
     font-size: 0.875rem;
     letter-spacing: 0.84px; }
   .m-blog-item .title {
     margin-bottom: 5px;
     font-size: 1.625rem;
+    line-height: 28px;
     letter-spacing: 1.04px; }
   .m-blog-item .descr {
     margin-bottom: 5px;
