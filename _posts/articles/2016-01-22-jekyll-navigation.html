@@ -6,7 +6,7 @@ weight: 4
 linkName: Все статьи
 parentLink: '/articles'
 categories: articles jekyll
-description: Небольшая статья про навигацию в Jekyll и возможность осуществлять ее в разных категориях.
+description: Навигация между постами в Jekyll и возможность осуществлять ее в разных категориях
 ---
 
 <h1>Jekyll и навигация между постами</h1>
@@ -17,7 +17,7 @@ description: Небольшая статья про навигацию в Jekyll
 
 
 <p>
-Сделать навигацию между постами в Jekyll довольно просто. Воспользуемся для этого глобальной переменной <span class="highlights">page</span> и переменными поста <span class="highlights">previous</span> и <span class="highlights">next</span>.
+Сделать навигацию между постами в Jekyll довольно просто. Воспользуемся для этого глобальной переменной <span class="highlights">page</span> и поста <span class="highlights">previous</span> и <span class="highlights">next</span>.
 </p>
 
 {% highlight html %}
@@ -30,9 +30,9 @@ description: Небольшая статья про навигацию в Jekyll
 {% endhighlight %}
 
 <p>
-Тем не менее пользователь находясь на странице последнего поста, будет видеть возможность перейти к следующему, которого нет. Та же ситуация и с первым постом.
+Тем не менее, пользователь, находясь на странице последнего поста, будет видеть возможность перейти к следующему, которого нет. Та же ситуация и с первым постом.
 <br>
-Исправить это можно воспользовавшись <span class="highlights">if</span>:
+Исправить это, можно воспользовавшись <span class="highlights">if</span>:
 </p>
 
 
@@ -49,7 +49,7 @@ description: Небольшая статья про навигацию в Jekyll
 {% endraw %}
 {% endhighlight %}
 
-<p>Таким образом, если  <span class="highlights">previous</span> или  <span class="highlights">next</span> возвращают  <span class="highlights">nil</span>, то ссылка находящаяся между  <span class="highlights">if</span> не отобразится. 
+<p>То есть, если  <span class="highlights">previous</span> или  <span class="highlights">next</span> возвращают  <span class="highlights">nil</span>, то ссылка находящаяся между  <span class="highlights">if</span> не отобразится. 
 </p>
 
 <p>Я использую посты не только для статей, но и для вывода работ. Структура папки <span class="highlights">_post</span> выглядит таким образом:
@@ -61,9 +61,9 @@ description: Небольшая статья про навигацию в Jekyll
   /-- projects/
 {% endhighlight %}
 
-<p>Применяя вышеописанную навигацию по постам, столкнулся с проблемой, когда есть возможность перейти со статей в работы и обратно. Поэтому потребовалось это устранить.
+<p>Но применяя этот способ, столкнулся с проблемой, когда мы переходим со статей в работы и обратно. Это необходимо устранить.
 <br>
-Код приведенный ниже решаем эту задачу:
+Код, приведенный ниже решает эту задачу:
 </p>
 
 {% highlight html %}
@@ -88,3 +88,52 @@ description: Небольшая статья про навигацию в Jekyll
 {% endif %}
 {% endraw %}
 {% endhighlight %}
+
+
+<p>Попробуем разобраться что к чему.</p>
+
+{% highlight html %}
+{% raw %}
+{% if page.categories %}
+ {% assign category = page.categories[0] %}
+ {% assign posts = site.categories[category] %}
+ <!-- остальной код -->
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+<p>Если пост имеет категории, тогда создаем две переменные. В первую помещаем необходимую нам категорию, а во вторую все посты связанные с ней.</p>
+
+
+{% highlight html %}
+{% raw %}
+<!-- остальной код -->
+{% for post in posts %}
+ {% if post.url == page.url %}
+  {% assign post_index0 = forloop.index0 %}
+  {% assign post_index1 = forloop.index %}
+ {% endif %}
+{% endfor %}
+ <!-- остальной код -->
+{% endraw %}
+{% endhighlight %}
+
+<p>При совпадении <span class="highlights">url</span> страницы и поста, помещаем индексы итерации в <span class="highlights">post_index0</span> и <span class="highlights">post_index</span>.</p>
+
+
+{% highlight html %}
+{% raw %}
+<!-- остальной код -->
+{% for post in posts %}
+ {% if post_index0 == forloop.index %}
+  {% assign next_post = post %}
+ {% endif %}
+ {% if post_index1 == forloop.index0 %}
+  {% assign prev_post = post %}
+ {% endif %}
+{% endfor %}
+ <!-- остальной код -->
+{% endraw %}
+{% endhighlight %}
+
+<p>Снова воспользовавшись <span class="highlights">for</span> перебираем посты, узная, естли следующий пост и предыдущий.</p>
