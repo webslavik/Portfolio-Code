@@ -1912,8 +1912,16 @@ p {
     letter-spacing: 1.6px; }
 
 .project-btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 60px;
   text-align: right; }
+  .project-btn-wrap > a:first-child {
+    margin-right: 45px; }
 
 .project-img-wrap {
   display: -webkit-box;
@@ -1948,8 +1956,18 @@ p {
       margin-bottom: 30px;
       width: 50%; }
   .project-btn-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 50px;
-    text-align: center; } }
+    text-align: center; }
+    .project-btn-wrap > a:first-child {
+      margin-right: 0;
+      margin-bottom: 40px; } }
 
 @media (max-width: 480px) {
   .project-descr li {

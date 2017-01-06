@@ -60,8 +60,14 @@
 
 //---------------------------------
 .project-btn-wrap {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 60px;
 	text-align: right;
+
+	> a:first-child {
+		margin-right: 45px;
+	}
 }
 
 
@@ -117,8 +123,15 @@
 
 
 	.project-btn-wrap {
+		flex-direction: column;
+		align-items: center;
 		margin-bottom: 50px;
 		text-align: center;
+
+		> a:first-child {
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
 	}
 
 }
