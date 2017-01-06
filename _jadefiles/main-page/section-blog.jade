@@ -17,8 +17,13 @@ section.m-blog
 					.descr  {{ site.data.homePost.one.description }}
 					.read &#8210; Read
 			.m-blog-column
-				- var z = 3;
-				while (z++ < 6)
+				a(href="{{ site.data.homePost.two.link }}").m-blog-item
+					.tag {{ site.data.homePost.two.tag }}
+					.title {{ site.data.homePost.two.title }}
+					.descr  {{ site.data.homePost.two.description }}
+					.read &#8210; Read
+				//- var z = 3;
+				//- while (z++ < 6)
 					//- a(href="#link").m-blog-item
 					//- 	.tag #javascript
 					//- 	.title Blog article title

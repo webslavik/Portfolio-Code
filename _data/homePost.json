@@ -4,5 +4,11 @@
 		"link": "/articles/jekyll/2016/01/22/jekyll-navigation.html",
 		"title": "Jekyll и навигация между постами",
 		"description": "Навигация между постами в Jekyll и возможность осуществлять ее в разных категориях"
+	},
+	"two": {
+		"tag": "#javascript",
+		"link": "articles/javascript/2017/01/06/copy-array-and-object.html",
+		"title": "Копирование массивов и объектов в JavaScript",
+		"description": "Рассмотрим возможные варианты, когда нам необходимо сделать копию массива или объекта, а также проблемы которые могут возникнуть при этом."
 	}
 }
