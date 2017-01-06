@@ -1,7 +1,7 @@
 {
 	"one": {
 		"tag": "#jekyll",
-		"link": "/articles/jekyll/2016/01/22/jekyll-navigation.html",
+		"link": "/articles/jekyll/2016/12/22/jekyll-navigation.html",
 		"title": "Jekyll и навигация между постами",
 		"description": "Навигация между постами в Jekyll и возможность осуществлять ее в разных категориях"
 	},
