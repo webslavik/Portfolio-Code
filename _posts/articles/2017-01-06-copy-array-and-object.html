@@ -1,0 +1,113 @@
+---
+layout: post
+title: Копирование массивов и объектов в JavaScript
+type: article
+weight: 4
+linkName: Все статьи
+parentLink: '/articles'
+categories: articles javascript
+description: Рассмотрим возможные варианты, когда нам необходимо сделать копию массива или объекта, а также проблемы которые могут возникнуть при этом.
+---
+
+<h1>Копирование массивов и объектов в JavaScript</h1>
+<div class="article-date-tag">
+	<span class="article-date">{{ page.date | date: "%d.%m.%Y" }} / </span>
+	<span class="article-tag">#{{ page.categories[1] }}</span>
+</div>
+
+
+<h2>Массивы</h2>
+
+<p>Для начала создадим простой массив:</p>
+
+{% highlight js %}
+const heros = ['Superman', 'Batman', 'Wonder Woman'];
+{% endhighlight %}
+
+
+<p><span class="bold">Вариант №1.</span> Воспользуемся методом <span class="highlights">.slice()</span>. Мы знаем что он принимает два аргумента - <span class="highlights">.slice(begin, end)</span>. Но если мы пропустим этот шаг и ничего не передадим, то возвратится полная копия массива.
+</p>
+
+{% highlight js %}
+const copyHeros = heros.slice();
+console.log(copyHeros) // ['Superman', 'Batman', 'Wonder Woman']
+{% endhighlight %}
+
+<p><span class="bold">Вариант №2.</span> Теперь нам поможет <span class="highlights">.concat()</span>. Вызываем его на пустом массиве и передаем в аргумент <span class="highlights">heros</span>.</p>
+
+{% highlight js %}
+const copyHeros = [].concat(heros);
+console.log(copyHeros) // ['Superman', 'Batman', 'Wonder Woman']
+{% endhighlight %}
+
+<p>Воспользуемся возможностями <span class="highlights">ES6</span>.</p>
+
+<p><span class="bold">Вариант №3.</span> Используем <span class="highlights">spread</span> (оператор расширения).</p>
+
+{% highlight js %}
+const copyHeros = [...heros];
+console.log(copyHeros) // ['Superman', 'Batman', 'Wonder Woman']
+{% endhighlight %}
+
+<p><span class="bold">Вариант №4.</span> И напоследок применим метод <span class="highlights">.from()</span>, который необходимо вызвать на объекте <span class="highlights">Array</span>.
+</p>
+
+{% highlight js %}
+const copyHeros = Array.from(heros);
+console.log(copyHeros) // ['Superman', 'Batman', 'Wonder Woman']
+{% endhighlight %}
+
+
+
+<h2>Объекты</h2>
+
+<p>В JS с копированием объектов все чуть сложнее чем хотелось бы, т.к. нет нативного метода.</p>
+
+<p><span class="bold">Вариант №1.</span> Мы можем сами написать необходимый код. Выглядеть он будет подобным образом: </p>
+
+{% highlight js %}
+
+function makeClone(obj) {
+  let clone = {}; // Создаем новый пустой объект
+  for (let prop in obj) { // Перебираем все свойства копируемого объекта
+    if (obj.hasOwnProperty(prop)) { // Только собственные свойства
+      if ("object"===typeof obj[prop]) // Если свойство также объект
+        clone[prop] = makeClone(obj[prop]); // Делаем клон свойства
+      else
+        clone[prop] = obj[prop]; // Или же просто копируем значение
+    }
+  }
+ return clone;
+}
+
+const cloneObj = makeClone(someObj);
+{% endhighlight %}
+
+<p><span class="bold">Вариант №2.</span> <span class="highlights">JSON.parse</span> и <span class="highlights">JSON.stringify</span> тоже поможет сделать копию объекта:</p>
+
+{% highlight js %}
+const cloneObj = JSON.parse(JSON.stringify(someObj));
+{% endhighlight %}
+
+
+<p><span class="bold">Вариант №3.</span> В <span class="highlights">ES6</span> у <span class="highlights">Object</span> появился метод <span class="highlights">.assign()</span>. К сожалению он не делает глубокое копирование:
+</p>
+
+{% highlight js %}
+const cloneObj = Object.assing({}, someObj);
+{% endhighlight %}
+
+<p><span class="bold">Вариант №4.</span> Можно воспользоваться сторонними библиотеками.</p>
+
+<p>В <span class="highlights">jQuery</span> есть метод <span class="highlights">jQuery.extend()</span>:</p>
+
+{% highlight js %}
+const cloneObj = $.extend(true, {}, someObj);
+{% endhighlight %}
+
+
+<p>В <span class="highlights">Lodash</span> есть <span class="highlights">.cloneDeep()</span>:</p>
+
+{% highlight js %}
+const cloneObj = _.cloneDeep(someObj);
+{% endhighlight %}
