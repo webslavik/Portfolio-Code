@@ -1,0 +1,86 @@
+---
+layout: post
+title: gulp-uglify не поддерживает ES6
+type: article
+weight: 4
+linkName: Все статьи
+parentLink: '/articles'
+categories: articles gulp
+description: Новый стандарт => новые возможности. Мне нравятся arrow function, а еще let и const и многое другое из ES6. Но внезапно с этим возникли трудности.
+---
+
+
+<h1>gulp-uglify не поддерживает ES6</h1>
+<div class="article-date-tag">
+  <span class="article-date">{{ page.date | date: "%d.%m.%Y" }} / </span>
+  <span class="article-tag">#{{ page.categories[1] }}</span>
+</div>
+
+
+<p>Как то раз, изучая AngularJS, захотелось автоматизировать процесс с помощью Gulp.<br>
+Скрипты необходимо будет собрать в один файл, затем минифицировать.
+</p>
+
+<p>Окей, для минификации отлично подойдет gulp-uglify. Установим его:</p>
+
+{% highlight js %}
+npm i --save gulp-uglify
+{% endhighlight %}
+
+<p>Теперь напишем задачу для сборки:</p>
+
+{% highlight js %}
+gulp.task('js', () => {
+  return gulp.src([
+      'app/js/app.js',
+      'app/js/controllers/addUserCtrl.js'
+    ])
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'));
+});
+{% endhighlight %}
+
+
+<p>Выполняем...ошибка. В чем дело?!</p>
+
+<p>Потратив некоторое количество времени, решил спросить у Гугла. <br>
+Гугл быстро дал ответ и оказалось, что gulp-uglify просто не сообщили что такое ES6. 
+</p>
+
+
+<p>Хорошо, но что мне теперь делать? Все переписывать?</p>
+ 
+<p>Нет, необязательно. <br>
+Один из вариантов (другие, признаюсь, поленился искать) это установка babel и затем компиляция ES6 в ES5.</p>
+
+{% highlight js %}
+npm install gulp-babel babel-preset-es2015
+{% endhighlight %}
+
+<p>Обновляем наш код:</p>
+
+{% highlight js %}
+var babel  = require('gulp-babel');
+
+gulp.task('js', () => {
+  return gulp.src([
+      'app/js/app.js',
+      'app/js/controllers/addUserCtrl.js'
+    ])
+    .pipe(babel({presets: ['es2015']})) // <= добавили эту строку
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'));
+});
+{% endhighlight %}
+
+
+<p>Супер. Только я хотел чтобы браузер читал es6 код, а не es5. <br>
+Но и на том спасибо.</p>
+
+
+
+
+
+

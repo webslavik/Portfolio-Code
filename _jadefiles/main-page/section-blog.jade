@@ -11,17 +11,22 @@ section.m-blog
 
 		.m-blog-row
 			.m-blog-column
-				a(href="{{ site.data.homePost.one.link }}").m-blog-item
-					.tag {{ site.data.homePost.one.tag }}
-					.title {{ site.data.homePost.one.title }}
-					.descr  {{ site.data.homePost.one.description }}
-					.read &#8210; Read
+				a(href="{{ site.data.homePost.postOne.link }}").m-blog-item
+					.tag {{ site.data.homePost.postOne.tag }}
+					.title {{ site.data.homePost.postOne.title }}
+					.descr  {{ site.data.homePost.postOne.description }}
+					.read &#8210; Читать
+				a(href="{{ site.data.homePost.postThree.link }}").m-blog-item
+					.tag {{ site.data.homePost.postThree.tag }}
+					.title {{ site.data.homePost.postThree.title }}
+					.descr  {{ site.data.homePost.postThree.description }}
+					.read &#8210; Читать
 			.m-blog-column
-				a(href="{{ site.data.homePost.two.link }}").m-blog-item
-					.tag {{ site.data.homePost.two.tag }}
-					.title {{ site.data.homePost.two.title }}
-					.descr  {{ site.data.homePost.two.description }}
-					.read &#8210; Read
+				a(href="{{ site.data.homePost.postTwo.link }}").m-blog-item
+					.tag {{ site.data.homePost.postTwo.tag }}
+					.title {{ site.data.homePost.postTwo.title }}
+					.descr  {{ site.data.homePost.postTwo.description }}
+					.read &#8210; Читать
 				//- var z = 3;
 				//- while (z++ < 6)
 					//- a(href="#link").m-blog-item
