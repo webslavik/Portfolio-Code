@@ -107,7 +107,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.5;
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
   background-color: #fff;
   color: #222222;
   -webkit-font-smoothing: antialiased;

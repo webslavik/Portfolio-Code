@@ -25,7 +25,7 @@ var myModule = (function() {
 		//-----------------------
 		_showMenu();
 		_actionHamburger();
-		_preloader();
+		// _preloader();
 	};
 	//-------------------------------------------------------------------
 
