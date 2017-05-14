@@ -8,14 +8,6 @@ weight: 3
 
 <main class="content js-content">
 	{% include inner-header.html %}
-
-	<div class="container container--project">
-		{% for project in site.categories.projects %}
-				<h2 class='projects-title'><a href="{{ project.url }}">{{ project.title }}</a></h2>
-			</article>
-		{% endfor %}
-	</div>
-	
+	{% include projects/work.html %}
 	{% include inner-footer.html %}
-
 </main>
