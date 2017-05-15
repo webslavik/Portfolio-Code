@@ -1,0 +1,28 @@
+include ../mixins/_include
+
+// begin work main page
+
+section.project-work
+	.container
+
+		.m-work-list
+
+			- var projName = ['The Movie', 'Qlothes','Montessori', 'DanceWorld', 'cmsmagazine', 'SAB', 'ChikkiPizza']
+			- var logos = ['svg/the-movie-db.svg', 'svg/qlothes-cover.svg', 'svg/montessori-cover.svg', 'png/danceworld-cover.png', 'png/cmsmagazine-cover.png', 'svg/sab-cover.svg', 'png/chikkipizza-cover.png']
+			- var coverColor = ['#00d573', '#d5ece1', '#c27871', '#f66b8f', '#e4e5e6', '#d0ba93', '#e3975a']
+			- var logosSize = ['30', '35', '45', '40', '55', '35', '30']
+			- var link = ['/projects/2017/05/15/the-movie.html', '/projects/2016/11/07/qlothes.html', '/projects/2016/11/06/montessori.html', '/projects/2016/11/05/danceworld.html', '/projects/2016/11/04/cmsmagazine.html', '/projects/2016/11/01/sab.html', '/projects/2016/11/01/chikki-pizza.html']
+			- var hashWork = ['#frontend/design', '#frontend', '#frontend', '#frontend', '#frontend', '#frontend', '#frontend']
+
+			- var i = 0;
+			while (i++ < projName.length)
+
+				a(href="#{link[i-1]}").m-work-item
+					.item-background(style='background-image: url(../assets/img/#{logos[i-1]}); background-color: #{coverColor[i-1]}; background-size: #{logosSize[i-1]}%;')
+					.item-meta
+						.title #{projName[i-1]}
+						.descr #{hashWork[i-1]}
+					.item-cover(style='background-color: #{coverColor[i-1]}')
+
+
+// end work main page
